@@ -1,0 +1,109 @@
+.sfdownloadList
+{
+    .sfLargeIcns &, .sfSmallIcns &
+    {
+        #widget > #list > .titles-only();
+    }
+
+
+    .sfLargeIcns & .sfdownloadTitle
+    {
+        font-size: @fontSizeH4;
+    }
+
+    .sfdownloadFile
+    {
+        #widget > #list > .titles-dates > .list-items();
+    }
+
+    .sfLargeIcns & .sfdownloadFile
+    {
+        margin-top: @baseLineHeight;
+        margin-bottom: @baseLineHeight;
+    }
+
+    &.sfListAndDetailMode .sfdownloadFile
+    {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .sfInfo
+    {
+        font-size: @fontSizeMini;
+        line-height: 1.2;
+    }
+
+    .sfcommentsCounterWrp
+    {
+        font-size: @fontSizeSmall;
+    }
+}
+.sfdownloadTable
+{
+    .sfdownloadType, .sfdownloadSize, &.RadGrid .sfdownloadType.rgHeader, &.RadGrid .sfdownloadSize.rgHeader
+    {
+        text-align: right;
+    }
+
+    tbody
+    {
+        td
+        {
+            font-size: @fontSizeH5;
+        }
+
+        .sfdownloadTitle
+        {
+            font-size: @fontSizeH4;
+            font-weight: bold;
+        }
+
+        .sfdownloadType, .sfdownloadSize, .sfdownloadDate
+        {
+            color: @infoText;
+        }
+
+        .sfcommentsIconOnly
+        {
+            font-size: 1em;
+        }
+    }
+}
+.sfdownloadDetails
+{
+    .sfdownloadTitle
+    {
+        #widget > #details > .title();
+    }
+
+    .sfdownloadLinkWrp
+    {
+        #widget > #details > .rtf(); 
+        padding: @baseLineHeight;
+        background-color: @infoBackgroundLight;
+    }
+
+    .sfdownloadLink
+    {
+        font-size: @fontSizeH5;
+    }
+
+    .sfInfo
+    {
+        margin-left: 50px;
+        margin-top: -@baseLineHeight/2;
+        color: @infoText;
+        font-size: @fontSizeSmall;
+        line-height: 1.2;
+    }
+
+    .sfcommentsCounterWrp
+    {
+        margin-left: 0;
+    }
+}
+.sfdownloadFileWrp
+{
+    #widget > #details > .rtf();
+}

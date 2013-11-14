@@ -1,0 +1,231 @@
+﻿.sfFormsEditor
+{
+    .sfFormTitle, .sfFormInstructions, .sfFormBox, .sfFormFile, .sfFormDropdown, .sfFormBlock, .sfFormCheckboxlist, .sfFormRadiolist, .sfFormSubmit, .sfFormCaptcha
+    {
+        margin-top: @baseLineHeight;
+        margin-bottom: @baseLineHeight;
+    }
+
+    .sfRadioList label, .sfCheckListBox label
+    {
+        display: inline-block;
+        .ie7-inline-block();
+        margin-left: .2em;
+        margin-right: @baseLineHeight / 2;
+        min-width: @formChoiceColumnsWidth;
+    }
+
+    .sfRadioList label, .sfCheckListBox label,
+    .sfRadioList input, .sfCheckListBox input
+    {
+        vertical-align: middle;
+    }
+
+    .sfFormTitle
+    {
+        &.sfTitleSmall
+        {
+            font-size: @fontSizeH4;
+        }
+
+        &.sfTitleMedium
+        {
+            font-size: @fontSizeH3;
+        }
+
+        &.sfTitleLarge
+        {
+            font-size: @fontSizeH2;
+        }
+    }
+
+    .sfFormBox
+    {
+        &.sfTxtBoxSmall .sfTxt
+        {
+            width: @formSmallWidth;
+        }
+
+        &.sfTxtBoxMedium .sfTxt
+        {
+            width: @formMediumWidth;
+        }
+
+        &.sfTxtBoxLarge .sfTxt
+        {
+            width: @formLargeWidth;
+        }
+    }
+
+    .sfFormBlock
+    {
+        &.sfTxtBlockSmall .sfTxt
+        {
+            width: @formSmallWidth * 2;
+            height: @formHeight;
+        }
+
+        &.sfTxtBlockMedium .sfTxt
+        {
+            width: @formMediumWidth * 2;
+            height: @formHeight;
+        }
+
+        &.sfTxtBlockLarge .sfTxt
+        {
+            width: @formLargeWidth * 1.5;
+            height: @formHeight * 2;
+        }
+    }
+
+    .sfFormDropdown
+    {
+
+        &.sfDdlSmall select
+        {
+            width: @formSmallWidth + .9em;
+        }
+
+        &.sfDdlMedium select
+        {
+            width: @formMediumWidth + .9em;
+        }
+
+        &.sfDdlLarge select
+        {
+            width: @formLargeWidth + .9em;
+        }
+    }
+
+    .sfFormSubmit
+    {
+        input
+        {
+            .btn();
+        }
+
+        &.sfSubmitBtnSmall input
+        {
+            .btn > .medium();
+        }
+
+        &.sfSubmitBtnMedium input
+        {
+        }
+
+        &.sfSubmitBtnLarge input
+        {
+            .btn > .large();
+        }
+    }
+
+    .RadUpload
+    {
+        .upload();
+    }
+
+    &.sfTopLbls
+    {
+        .sfTxtLbl
+        {
+            font-weight: bold;
+        }
+
+        .sfFormCaptcha
+        {
+            p
+            {
+                padding-top: @baseLineHeight;
+            }
+        }
+    }
+
+    &.sfLeftLbls, &.sfRightLbls
+    {
+        .sfTxtLbl, .sfFieldWrp
+        {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .sfTxtLbl
+        {
+            padding-right: 1em;
+            width: @formMediumWidth;
+        }
+
+        .sfFormTitle, .sfFormInstructions, .sfFormBox, .sfFormFile, .sfFormDropdown, .sfFormBlock, .sfFormCheckboxlist, .sfFormRadiolist, .sfFormSubmit
+        {
+            margin-top: @baseLineHeight * 1.5;
+            margin-bottom: @baseLineHeight * 1.5;
+        }
+
+        .sfFormSubmit
+        {
+            margin-left: @formMediumWidth + 1em;
+        }
+
+        .RadCaptcha
+        {
+            .sfFormCaptcha
+            {
+                > p, > div
+                {
+                    margin-left: 13.5em;
+                }
+
+                .sfTxtLbl
+                {
+                    margin-left: -13.5em;
+                }
+            }
+        }
+    }
+
+    &.sfRightLbls .sfTxtLbl
+    {
+        text-align: right;
+    }
+
+    .sfFormCaptcha
+    {
+        .rcRefreshImage
+        {
+            font-size: @fontSizeSmall;
+        }
+
+        p
+        {
+            margin-top: @baseLineHeight / 2;
+            position: relative;
+
+            .sfTxt
+            {
+                width: @formSmallWidth;
+            }
+
+            .sfTxtLbl
+            {
+                left: 0;
+                position: absolute;
+                top: 0;
+            }
+        }
+    }
+}
+
+.sfWatermarkField
+{
+	position: relative;
+    .sfTxtLbl
+    {
+	    left: .5em;
+	    padding: 0;
+	    position: absolute;
+	    text-align: left;
+	    top: .3em;
+	    color: @grayLight;
+	    font-style: italic;
+        font-weight: normal;
+    }
+}

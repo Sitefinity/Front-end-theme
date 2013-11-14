@@ -1,0 +1,27 @@
+.sf_pagerNumeric
+{
+    margin-top: @baseLineHeight;
+    margin-bottom: @baseLineHeight;
+    a
+    {
+        margin-right: @baseLineHeight / 2;
+        padding: @paddingMini;
+        color: @linkColor;
+        border: 1px solid @white;
+        .border-radius(@borderRadiusSmall);
+
+        &:hover
+        {
+            border-color: @linkColorHover;
+            text-decoration: none;
+        }
+
+        &.sf_PagerCurrent
+        {
+            background-color: @linkColor;
+            border-color: @linkColor;
+            color: white;
+            cursor: default;
+        }
+    }
+}

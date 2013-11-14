@@ -1,0 +1,58 @@
+.sfcommentsListWrp
+{
+    .sfcommentsList
+    {
+        .sfUnstyledList();
+            margin-bottom: @baseLineHeight * 2;
+
+        .sfcommentDetails
+        {
+            position: relative;
+            margin-left: 50px;
+            margin-top: @baseLineHeight * 1.5;
+            margin-bottom: @baseLineHeight * 1.5;
+            padding: 5px 10px; 
+
+            .sfcommentNumber
+            {
+                display: block;
+                position: absolute;
+                margin-left: -80px;
+                width: 60px;
+                text-align: right;
+                font-size: @fontSizeH1;
+                color: @grayMoreLighter;
+            }
+
+            .sfcommentAuthor
+            {
+                color: @gray;
+                font-weight: normal;
+            }
+            .sfcommentAuthor:before
+            {
+                content: "\2014";
+            }
+
+
+            .sfcommentDate
+            {
+                color: @gray;
+                font-style: normal;
+            }
+            .sfcommentDate:before
+            {
+                content: " | ";
+            }
+
+            .sfcommentText
+            {
+            }
+
+            &.sfcommentOfTheAuthor
+            {
+                background-color: @infoBackground;
+            }
+        }
+    }
+}

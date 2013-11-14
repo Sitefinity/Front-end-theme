@@ -1,0 +1,491 @@
+.sfforumsTitle, .sfforumTitle, .sfforumPostTitle, .sfforumNewThreadTitle
+{
+    margin-top: 0;
+}
+.sfClosedItm
+{
+    margin-top: -.5em;
+    padding-left: 35px;
+    line-height: 1.625em;
+    background: transparent @backgroundImageSpriteForums no-repeat 0 -1400px;
+}
+.sfforumsFilterWrp
+{
+    font-size: @fontSizeSmall;
+    .sfthreadsFilterListWrp
+    {
+        display: inline-block;
+    }
+
+    .sfthreadsFilterList
+    {
+        margin-top: 0;
+        margin-bottom: 0;
+        .sfInlineList();
+    }
+}
+.sfforumPostBreabcrumbWrp
+{
+    font-size: @fontSizeSmall;
+    color: @grayLight;
+
+    .sfDisabled
+    {
+        color: @grayLight;
+        cursor: default;
+
+        &:link, &:visited, &:hover, &:active
+        {
+            color: @grayLight;
+            cursor: default;
+        }
+    }
+}
+.sfforumNewThreadLnk, .sfforumReplyBtn
+{
+    .btn();
+}
+.sfforumSubscribeWrp
+{
+    float: right;
+
+    .sfforumRssLnk
+    {
+        #icon;
+        #icon > .small-icon();
+        #icon > .rss();
+        font-size: @fontSizeSmall;
+    }
+}
+.sfforumSocialShareWrp
+{
+    font-style: italic;
+    color: @grayLight;
+
+    .RadSocialShare
+    {
+        float: right;
+        border: 0;
+        padding: 0;
+    }
+
+    &.sfTop
+    {
+        margin-top: @baseLineHeight * 1.5;
+    }
+
+    &.sfBottom
+    {
+        margin-bottom: @baseLineHeight * 1.5;
+        padding-top: @baseLineHeight;
+        border-top: 1px solid @grayMoreLighter;
+    }
+}
+.sfforumsList
+{
+    #widget > #table;
+
+    tr:hover th, tr:hover td
+    {
+        background-color: transparent;
+    }
+
+    .sfforumGroupTitle
+    {
+        display: inline-block;
+        margin-top: @baseLineHeight / 4;
+        margin-bottom: 0;
+        line-height: 1.2;
+        font-size: @fontSizeH3;
+    }
+
+    .sfforumTitle
+    {
+        font-size: @fontSizeH5;
+    }
+
+    .sfforumGroupDescription, .sfforumDescription
+    {
+        margin-top: 0;
+        margin-bottom: 0;
+        #widget > #table > .smaller();
+        font-weight: normal;
+    }
+
+    .sfforumImgWrp
+    {
+        padding-left: 0;
+        padding-right: 10px;
+        width: 50px;
+    }
+
+    .sfforumTitleWrp
+    {
+        #widget > #table > .first();
+        .sfLockedForum
+        {   
+            display: inline-block;
+
+            margin-right: .3em;
+            width: 14px;
+            height: 14px;
+            background: transparent @backgroundImageSpriteForums no-repeat 0 -1300px;
+        }
+    }
+
+    .sfforumThreadsCountWrp, .sfforumPostsCountWrp, .sfforumLastPostWrp
+    {
+        .text-overflow();
+    }
+
+    .sfforumThreadsCountWrp, .sfforumPostsCountWrp
+    {
+        font-size: @fontSizeMini;
+        #widget > #table > .numeric();
+
+        .sfforumThreadsCount, .sfforumPostsCount
+        {
+            font-size: @fontSizeH3;
+            font-weight: normal;
+        }
+    }
+
+    .sfforumLastPostWrp
+    {
+        #widget > #table > .last();
+        #widget > #table > .smaller();
+    }
+}
+.sfforumThreadsList
+{
+    #widget > #table;
+
+    .sfforumThreadWrp
+    {
+        #widget > #table > .first();
+    }
+
+    .sfforumThreadLastPostWrp
+    {
+        #widget > #table > .last();
+    }
+
+    .sfforumThreadTitle
+    {
+        font-size: @fontSizeH4;
+    }
+
+    .sfforumThreadAnswered
+    {
+        margin-left: @baseLineHeight;
+        padding-left: 20px;
+        padding-right: 3px;
+        color: @green;
+        background: transparent @backgroundImageSpriteForums no-repeat 0 -999px;
+    
+        position: relative;
+        margin-top: -3px;
+    }
+
+    .sfforumThreadAgeWrp, .sfforumThreadLastPostWrp
+    {
+        #widget > #table > .smaller();
+    }
+
+    .sfforumThreadPostsWrp, .sfforumThreadViewsWrp
+    {
+        #widget > #table > .numeric();
+    }
+
+    tbody .sfforumThreadPostsWrp, tbody .sfforumThreadViewsWrp
+    {
+        font-size: @fontSizeH5;
+    }
+
+    .sfforumThreadTitleAndAgeWrp
+    {
+        margin-left: 35px;
+    }
+
+
+    .sfNormalThread, .sfLockedThread, .sfAnnouncmentThread, .sfStickyThread
+    {
+        #icon;
+        #icon > .icon-elem();
+    }
+
+    .sfNormalThread, .sfLockedThread
+    {
+        float: left;
+        margin-left: 5px;
+        margin-right: 10px;
+    }
+
+    .sfNormalThread
+    {
+        #icon > .icon-elem > .thread();
+    }
+
+    .sfLockedThread
+    {
+        #icon > .icon-elem > .locked-thread();
+    }
+
+    .sfAnnouncmentThread
+    {
+        #icon > .icon-elem > .announcement();
+    }
+
+    .sfStickyThread
+    {
+        #icon > .icon-elem > .sticky();
+    }
+}
+.sfforumNewThreadWrp
+{
+    .sfforumNewThreadFormList
+    {
+        .sfUnstyledList();
+
+        > li
+        {
+            margin-top: @baseLineHeight / 2;
+            margin-bottom: @baseLineHeight;
+        }
+
+
+        .sfforumNewThreadContent
+        {
+            .sfEditorWrp
+            {
+                .rad-editor(750px, 0);
+            }
+        }
+    }
+
+    .sfSubmitBtnWrp
+    {
+        margin-top: @baseLineHeight * 1.5;
+        margin-bottom: @baseLineHeight;
+
+        .sfSubmitBtn
+        {
+            .btn();
+        }
+
+        .sfCancel
+        {
+            .cancel();
+        }
+    }
+}
+.sfforumThreadPostUser
+    {
+        float: left;
+        width: 140px;
+
+        .sfforumUser
+        {
+            display: block;
+            margin-bottom: @baseLineHeight / 3;
+            font-weight: normal;
+            .text-overflow();
+        }
+
+        .sfforumUserPostsInfo
+        {
+            margin-top: @baseLineHeight;
+            color: @gray;
+            font-size: @fontSizeSmall;
+            line-height: 1.3;
+        }
+    }
+.sfforumThreadPostContentWrp, .sfforumReplyThreadContent
+{
+    margin-left: 150px;
+}
+.sfforumThreadPostList
+{
+    .sfUnstyledList();
+
+    .sfforumThreadPost
+    {
+        padding-top: @baseLineHeight;
+        padding-bottom: @baseLineHeight;
+        border-top: 1px solid @grayMoreLighter;
+    }
+
+    .sfEditBtn
+    {
+        font-size: @fontSizeSmall;
+    }
+
+    .sfforumPostAge
+    {
+        color: @gray;
+        font-size: @fontSizeSmall;
+        font-style: italic;
+    }
+
+    .sfforumPostPermalink
+    {
+        font-size: @fontSizeMini;
+    }
+
+    .sfforumPostIsFeaturedWrp
+    {
+        float: right;
+
+        .sfforumPostUnmarkFeatured
+        {
+            font-size: @fontSizeMini;
+        }
+
+        .sfforumPostMarkFeatured
+        {
+            font-size: @fontSizeSmall;
+        }
+
+        .sfforumPostFeatured
+        {
+            margin-right: @baseLineHeight/2;
+            #icon;
+            #icon > .small-icon();
+            #icon > .featured();
+        }
+    }
+
+    .sfforumThreadPostContent
+    {
+        margin-top: @baseLineHeight;
+        margin-bottom: @baseLineHeight;
+    }
+
+    .sfPostQuoteView
+    {
+        padding: @baseLineHeight;
+        font-style: normal;
+        border: 1px dashed @grayLight;
+        background-color: @grayLightest;
+
+        .sfPostQuoteView
+        {
+            margin-bottom: 0;
+        }
+    }
+
+    .sfforumLastModified
+    {
+        margin-top: @baseLineHeight;
+        margin-bottom: @baseLineHeight;
+        color: @gray;
+        font-size: @fontSizeSmall;
+    }
+
+    .sfforumPostAttachmentsList
+    {
+        margin-top: @baseLineHeight;
+        margin-bottom: @baseLineHeight;
+
+        .sfdownloadFileWrp
+        {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+
+    .sfforumReplyBtn
+    {
+        .btn > .medium();
+    }
+}
+.sfforumReplyPostWrp
+{
+    margin-bottom: @baseLineHeight * 1.5;
+}
+.sfforumPostReplyContainer
+{
+    display: none;
+
+    .sfforumReplyFormVisible &
+    {
+        background-color: @white;
+        border-top: 10px solid @grayMoreLighter;
+        bottom: 0;
+        display: block;
+        height: 305px;
+        left: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding-top: 20px;
+        position: fixed;
+        right: 0;
+    }
+
+    .sfforumPostReplyForm
+    {
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: @baseLineHeight;
+        width: 920px;
+    }
+
+    .sfforumsReplyToTitle
+    {
+        display: inline;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: @baseLineHeight;
+        font-size: 1em;
+    }
+
+    .sfQuote
+    {
+        #icon;
+        #icon > .small-icon();
+        #icon > .quote();
+        font-size: @fontSizeSmall;
+    }
+
+    .sfEditorWrp
+    {
+        .rad-editor(750px, 0);
+    }
+
+
+    .sfforumReplyThreadAttachmentsWrp
+    {
+        margin-top: @baseLineHeight / 2;
+    }
+
+    .sfforumReplyThreadAttachmentsToggle
+    {
+        #icon;
+        #icon > .small-icon();
+        #icon > .attachment();
+        font-size: @fontSizeSmall;
+        cursor: pointer;
+    }
+
+    .RadUpload
+    {
+        .upload();
+    }
+
+    .sfSubmitBtnWrp
+    {
+        margin-top: @baseLineHeight * 1.5;
+        margin-bottom: @baseLineHeight;
+
+        .sfSubmitBtn
+        {
+            .btn();
+        }
+
+        .sfCancel
+        {
+            .cancel();
+        }
+    }
+}

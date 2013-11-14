@@ -1,0 +1,271 @@
+.sftaxonTitle
+{
+    margin-top: 0;
+    font-size: @fontSizeH5;
+}
+.sftaxonHorizontalList
+{
+    #filter-list > .list();
+
+    .sfCount
+    {
+        #filter-list > .list > .item > .count();
+    }
+}
+.sftaxonVerticalList
+{
+    #filter-list > .list();
+
+    .sftaxonItem
+    {
+        display: inline;
+        padding-right: 1em;
+    }
+
+    .sfCount
+    {
+        #filter-list > .list > .item > .count();
+    }
+}
+.sftaxonCloud
+{
+    #filter-list > .list();
+
+    .sftaxonItem
+    {
+        display: inline;
+        padding-right: 1em;
+        vertical-align: bottom;
+
+        .sfCloudSize6
+        {
+            font-size: @fontSizeH1;
+        }
+
+        .sfCloudSize5
+        {
+            font-size: @fontSizeH2;
+        }
+
+        .sfCloudSize4
+        {
+            font-size: @fontSizeH3;
+        }
+
+        .sfCloudSize3
+        {
+            font-size: @fontSizeH4;
+        }
+
+        .sfCloudSize2
+        {
+            font-size: @fontSizeH5;
+        }
+
+        .sfCloudSize1
+        {
+            font-size: @fontSizeH6;
+        }
+    }
+
+    .sfCount
+    {
+        #filter-list > .list > .item > .count();
+    }
+}
+/* Departments */
+.RadTabStrip, .RadTabStripVertical
+{
+    font-size: inherit;
+    line-height: inherit;
+
+    .rtsLI, .rtsLink
+    {
+        font-size: inherit;
+        line-height: inherit;
+    }
+
+    .rtsLI
+    {
+        .rtsLink, .rtsOut, .rtsIn
+        {
+            background-image: none;
+        }
+
+        background-color: @blue;
+
+        .rtsLink
+        {
+            display: block;
+            padding: 0 1.25em;
+            height: 2.875em;
+            line-height: 2.875em;
+            color: @white;
+            text-align: left;
+
+            &:hover
+            {
+                background-color: @white;
+                color: @blue;
+
+                .rtsTxt
+                {
+                    text-decoration: none;
+                }
+            }
+
+            &.rtsSelected, &.rtsSelected:hover
+            {
+                background-color: @blueDark;
+                color: @white;
+            }
+
+            .rtsOut, .rtsIn, .rtsTxt
+            {
+                display: inline;
+                padding: 0;
+            }
+        }
+    }
+}
+.RadTabStrip
+{
+    .rtsLI
+    {
+        border-left: 1px solid @white;
+
+        &:first-child
+        {
+            border-left: 0;
+        }
+    }
+}
+.RadTabStripVertical
+{
+    .rtsLI
+    {
+        .rtsLink
+        {
+            border-bottom: 1px solid @white;
+        }
+    }
+}
+.RadTreeView
+{
+    font-size: inherit;
+    line-height: inherit;
+    font-family: inherit;
+
+    .rtUL
+    {
+        .rtLI
+        {
+            .rtIn
+            {
+                border: 0;
+                padding: 0;
+                color: @blue;
+            }
+
+            .rtSelected .rtIn, .rtHover .rtIn
+            {
+                border: 0;
+                background-image: none;
+                background-color: transparent;
+                color: @blueDark;
+            }
+
+            .rtHover .rtIn
+            {
+                cursor: default;
+            }
+        }
+    }
+}
+.RadMenu
+{
+    font-size: inherit;
+    line-height: inherit;
+    font-family: inherit;
+    float: none;
+
+    .rmRootGroup.rmHorizontal
+    {
+        float: none;
+        background-color: @blue;
+        border: 0;
+
+        .rmItem
+        {
+            padding: 0;
+            border-right: 1px solid @white;
+
+            .rmLink
+            {
+                padding: 0 1.25em;
+                height: 2.875em;
+                line-height: 2.875em;
+                font-size: inherit;
+                font-family: inherit;
+                cursor: pointer;
+                color: @white;
+
+                &:hover
+                {
+                    background-color: @white;
+                    color: @blue;
+                }
+
+                .rmExpandDown:after
+                {
+                    display: inline-block;
+                    content: " ";
+                    margin-right: -10px;
+                    width: 20px;
+                    height: 16px;
+                    background: transparent @backgroundImageSprite no-repeat 5px -975px !important;
+                }
+
+                &.rmSelected
+                {
+                    background-color: @blueDark;
+                    color: @white;
+
+                    .rmExpandDown:after
+                    {
+                        background-position: 5px -1007px !important;
+                    }
+                }
+
+                .rmText
+                {
+                    padding: 0;
+                    border: 0;
+                }
+            }
+        }
+
+        .rmGroup
+        {
+            padding: 0;
+            border: 0;
+            background-color: @blue;
+
+            .rmItem
+            {
+                border-right: 0;
+                border-top: 1px solid @white;
+
+                .rmLink
+                {
+                    margin: 0;
+
+                    .rmText
+                    {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}

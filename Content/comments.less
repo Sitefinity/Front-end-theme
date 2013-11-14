@@ -1,0 +1,205 @@
+/*#region --- COMMENTS --- */
+.sfcommentsCounterWrp
+{
+    display: inline-block;
+    vertical-align: top;
+
+    &.sfcommentsFull, &.sfcommentsShort
+    {
+        display: inline-block;
+        zoom: 1;
+        *display: inline;
+        vertical-align: top;
+
+        margin-left: 1em;
+        padding-left: 1.5em;
+        background: transparent @backgroundImageSprite no-repeat 0 -2695px;
+    }
+    &.sfcommentsIconOnly
+    {
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        font-size: @fontSizeSmall;
+        line-height: 1.25em;
+        width: 1.85em;
+        height: 1.8em;
+        background: transparent @backgroundImageSprite no-repeat 0 -2800px;
+    }
+    &.sfcommentsEmpty
+    {
+        background-position: 0 -2900px;
+    }
+}
+.sfcommentsListWrp
+{
+    margin-top: 4em;
+
+    .sfcommentsOderFilterWrp
+    {
+        margin-top: 1.2em;
+        float: right;
+        font-size: @fontSizeSmall;
+    }
+
+    .sfcommentsTitle
+    {
+        margin-top: 0;
+        display: inline-block;
+    }
+
+    .sfLeaveCommentLnk
+    {
+        margin-left: @baseLineHeight;
+        font-size: @fontSizeSmall;
+    }
+
+    .sfcommentsList
+    {
+        .sfUnstyledList();
+        list-style-position: outside;
+        border: 0;
+    }
+
+    .sfcommentDetails
+    {
+        margin-bottom: @baseLineHeight;
+        padding-left: 56px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .sfcommentAuthorAvatar
+    {
+        width: 40px;
+        position: absolute;
+        left: 0;
+    }
+
+    .sfcommentAuthor
+    {
+        color: @gray;
+    }
+
+    .sfcommentDate
+    {
+        font-style: normal;
+        color: @gray;
+    }
+
+    .sfcommentReplyLnk
+    {
+        margin-left: @baseLineHeight;
+        font-size: @fontSizeSmall;
+    }
+
+    .sfcommentText
+    {
+        margin-top: @baseLineHeight / 4;
+        line-height: 1.4;
+        font-size: @fontSizeSmall;
+        max-width: 45em;
+    }
+    .sfLoadMoreWrp
+    {
+        margin-bottom: 2.5em;
+        font-size: @fontSizeSmall;
+    }
+}
+
+
+.sfcommentsFormWithAvatarWrp
+{
+    position: relative;
+
+    .sfcommentAuthorAvatar
+    {
+        position: absolute;
+        width: 40px;
+    }
+
+    .sfcommentsFormWrp
+    {
+        padding-left: 56px;
+    }
+
+    .sfcommentsTitle
+    {
+        position: absolute;
+        top: .5em;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: .5em;
+        color: @grayLight;
+        font-size: 1em;
+        font-style: italic;
+    }
+
+    .sfcommentsFieldsList
+    {
+        .sfUnstyledList();
+        margin-top: 0;
+
+        .sfcommentsField
+        {
+            margin-bottom: @baseLineHeight;
+        }
+
+        .sfcommentEditor
+        {
+            width: @formLargeWidth;
+        }
+
+        .sfcommentCaptcha
+        {
+            .sfRestfulCaptchaImageWrp
+            {
+                min-height: 50px;
+            }
+
+            .sfRestfulCaptchaRefresh
+            {
+                font-size: @fontSizeSmall;
+                cursor: pointer;
+            }
+
+            .sfFieldWrp
+            {
+                margin-top: .5em;
+
+                .sfTxtLbl
+                {
+                    color: @grayLight;
+                    font-style: italic;
+                }
+            }
+        }
+    }
+
+    .k-editor
+    {
+        margin-top: 0;
+        margin-bottom: 0;
+
+        .k-editable-area
+        {
+            border: 0;
+        }
+
+        tr:hover
+        {
+            th, td
+            {
+                background-color: transparent;
+            }
+        }
+    }
+
+    .sfcommentsSubmitBtnWrp
+    {
+        .sfcommentsSubmitBtn
+        {
+            .btn();
+        }
+    }
+}

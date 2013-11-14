@@ -1,0 +1,43 @@
+.sfcommentsTitle
+{
+    margin-bottom: 0;
+    font-size: @fontSizeH4;
+}
+.sfcommentsForm
+{
+    .sfcommentsFieldsList
+    {
+        .sfUnstyledList();
+
+        .sfcommentsField
+        {
+            margin-top: @baseLineHeight / 2;
+            margin-bottom: @baseLineHeight;
+
+            .sfNote
+            {
+                font-size: @fontSizeSmall;
+                color: @gray;
+            }
+
+            &.sfcommentEditor
+            {
+
+                .sfEditorWrp
+                {
+                    .rad-editor();
+                }
+            }
+        }
+    }
+
+    .sfcommentsSubmitBtnWrp
+    {
+        margin-top: @baseLineHeight * 1.5;
+        margin-bottom: @baseLineHeight;
+        .sfcommentsSubmitBtn
+        {
+            .btn();
+        }
+    }
+}

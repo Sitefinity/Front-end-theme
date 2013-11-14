@@ -1,0 +1,45 @@
+.sfsearchBox
+{
+    margin-top: @baseLineHeight;
+    margin-bottom: @baseLineHeight;
+    .sfsearchSubmit
+    {
+        .btn();
+        .btn > .medium();
+        .btn > .secondary();
+    }
+}
+.sfsearchReultTitlesOnly
+{
+    margin-top: @baseLineHeight;
+    margin-bottom: @baseLineHeight;
+    .sfUnstyledList();
+}
+.sfsearchReultTitleSnippetUrl
+{
+    margin-top: @baseLineHeight;
+    margin-bottom: @baseLineHeight;
+
+    .sfsearchResultTitle
+    {
+        margin-top: @baseLineHeight;
+        font-size: @fontSizeH5;
+    }
+
+    dd
+    {
+        margin-left: 0;
+        font-size: @fontSizeSmall;
+    }
+
+    .sfsearchResultHighLighter
+    {
+        .sfHighlight
+        {
+            padding-left: .3em;
+            padding-right: .3em;
+            padding-bottom: .2em;
+            background-color: @infoBackground;
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.sfimagesTmbList
+{
+    #widget > #list > .titles-only();
+    #widget > #list > .tmb-list();
+}
+.sfimagesList
+{
+    #widget > #list > .titles-only();
+
+    .sfimageListItem
+    {
+        margin-bottom: @baseLineHeight * 1.5;
+        position: relative;
+
+        .sfcommentsCounterWrp 
+        {
+            position: absolute;
+            top: .625em;
+            left: .625em;
+        }
+    }
+}
+.sfimageDetails
+{
+    .sfimageLinksWrp
+    {
+        display: none;
+    }
+
+    .sfimageWrp
+    {
+        margin-bottom: @baseLineHeight;
+    }
+
+    .sfimageTitle
+    {
+        #widget > #details > .title();
+    }
+
+    .sfimageAuthorAndDate
+    {
+        #widget > .additional();
+    }
+}
+.sfimageWrp
+{
+    #widget > #details > .rtf();
+
+    img
+    {
+        max-width: 100%;
+    }
+}

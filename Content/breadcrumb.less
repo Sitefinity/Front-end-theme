@@ -1,0 +1,51 @@
+﻿.sfBreadcrumbWrp
+{
+    margin-top: @baseLineHeight / 2;
+    margin-bottom: @baseLineHeight / 2;
+
+    font-size: @fontSizeSmall;
+
+    .sfBreadcrumbLabel
+    {
+    }
+
+    .RadSiteMap
+    {
+        display: inline;
+
+        .rsmLevel
+        {
+            display: inline;
+
+            .rsmItem
+            {
+                font-size: inherit;
+
+                .rsmLink
+                {
+                    color: @linkColor;
+
+                    &:hover, *:focus
+                    {
+                        color: @linkColorHover;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            .sfNoBreadcrumbNavigation
+            {
+                .rsmLink
+                {
+                    cursor: default;
+                    color: @black;
+
+                    &:hover, *:focus
+                    {
+                        color: @black;
+                    }
+                }
+            }
+        }
+    }
+}

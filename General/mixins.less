@@ -1,0 +1,984 @@
+//
+// Mixins
+// --------------------------------------------------
+
+
+// UTILITY MIXINS
+// --------------------------------------------------
+
+// Clearfix
+// --------
+// For clearing floats like a boss h5bp.com/q
+.clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    // Fixes Opera/contenteditable bug:
+    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Webkit-style focus
+// ------------------
+.tab-focus() {
+  // Default
+  outline: thin dotted #333;
+  // Webkit
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+// Center-align a block level element
+// ----------------------------------
+.center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// IE7 inline-block
+// ----------------
+.ie7-inline-block() {
+  *display: inline; /* IE7 inline-block hack */
+  *zoom: 1;
+}
+
+// IE7 likes to collapse whitespace on either side of the inline-block elements.
+// Ems because we're attempting to match the width of a space character. Left
+// version is for form buttons, which typically come after other elements, and
+// right version is for icons, which come before. Applying both is ok, but it will
+// mean that space between those elements will be .6em (~2 space characters) in IE7,
+// instead of the 1 space in other browsers.
+.ie7-restore-left-whitespace() {
+  *margin-left: .3em;
+
+  &:first-child {
+    *margin-left: 0;
+  }
+}
+
+.ie7-restore-right-whitespace() {
+  *margin-right: .3em;
+}
+
+// Sizing shortcuts
+// -------------------------
+.size(@height, @width) {
+  width: @width;
+  height: @height;
+}
+.square(@size) {
+  .size(@size, @size);
+}
+
+// Placeholder text
+// -------------------------
+.placeholder(@color: @placeholderText) {
+  &:-moz-placeholder {
+    color: @color;
+  }
+  &:-ms-input-placeholder {
+    color: @color;
+  }
+  &::-webkit-input-placeholder {
+    color: @color;
+  }
+}
+
+// Text overflow
+// -------------------------
+// Requires inline-block or block for proper styling
+.text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hide-text-with-indent() {
+    display: inline-block;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+// CSS image replacement
+// -------------------------
+// Source: https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+
+// FONTS
+// --------------------------------------------------
+
+#font {
+  #family {
+    .serif() {
+      font-family: @serifFontFamily;
+    }
+    .sans-serif() {
+      font-family: @sansFontFamily;
+    }
+    .monospace() {
+      font-family: @monoFontFamily;
+    }
+  }
+  .shorthand(@size: @baseFontSize, @weight: normal, @lineHeight: @baseLineHeight) {
+    font-size: @size;
+    font-weight: @weight;
+    line-height: @lineHeight;
+  }
+  .serif(@size: @baseFontSize, @weight: normal, @lineHeight: @baseLineHeight) {
+    #font > #family > .serif;
+    #font > .shorthand(@size, @weight, @lineHeight);
+  }
+  .sans-serif(@size: @baseFontSize, @weight: normal, @lineHeight: @baseLineHeight) {
+    #font > #family > .sans-serif;
+    #font > .shorthand(@size, @weight, @lineHeight);
+  }
+  .monospace(@size: @baseFontSize, @weight: normal, @lineHeight: @baseLineHeight) {
+    #font > #family > .monospace;
+    #font > .shorthand(@size, @weight, @lineHeight);
+  }
+}
+
+
+// FORMS
+// --------------------------------------------------
+
+// Block level inputs
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: @inputHeight; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+  .box-sizing(border-box); // Makes inputs behave like true block-level elements
+}
+
+
+
+/*// Mixin for form field states
+.formFieldState(@textColor: #555, @borderColor: #ccc, @backgroundColor: #f5f5f5) {
+  // Set the text color
+  .control-label,
+  .help-block,
+  .help-inline {
+    color: @textColor;
+  }
+  // Style inputs accordingly
+  .checkbox,
+  .radio,
+  input,
+  select,
+  textarea {
+    color: @textColor;
+  }
+  input,
+  select,
+  textarea {
+    border-color: @borderColor;
+    .box-shadow(inset 0 1px 1px rgba(0,0,0,.075)); // Redeclare so transitions work
+    &:focus {
+      border-color: darken(@borderColor, 10%);
+      @shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 6px lighten(@borderColor, 20%);
+      .box-shadow(@shadow);
+    }
+  }
+  // Give a small background color for input-prepend/-append
+  .input-prepend .add-on,
+  .input-append .add-on {
+    color: @textColor;
+    background-color: @backgroundColor;
+    border-color: @textColor;
+  }
+}*/
+
+
+
+// CSS3 PROPERTIES
+// --------------------------------------------------
+
+// Border Radius
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+
+// Single Corner Border Radius
+.border-top-left-radius(@radius) {
+  -webkit-border-top-left-radius: @radius;
+      -moz-border-radius-topleft: @radius;
+          border-top-left-radius: @radius;
+}
+.border-top-right-radius(@radius) {
+  -webkit-border-top-right-radius: @radius;
+      -moz-border-radius-topright: @radius;
+          border-top-right-radius: @radius;
+}
+.border-bottom-right-radius(@radius) {
+  -webkit-border-bottom-right-radius: @radius;
+      -moz-border-radius-bottomright: @radius;
+          border-bottom-right-radius: @radius;
+}
+.border-bottom-left-radius(@radius) {
+  -webkit-border-bottom-left-radius: @radius;
+      -moz-border-radius-bottomleft: @radius;
+          border-bottom-left-radius: @radius;
+}
+
+// Single Side Border Radius
+.border-top-radius(@radius) {
+  .border-top-right-radius(@radius);
+  .border-top-left-radius(@radius);
+}
+.border-right-radius(@radius) {
+  .border-top-right-radius(@radius);
+  .border-bottom-right-radius(@radius);
+}
+.border-bottom-radius(@radius) {
+  .border-bottom-right-radius(@radius);
+  .border-bottom-left-radius(@radius);
+}
+.border-left-radius(@radius) {
+  .border-top-left-radius(@radius);
+  .border-bottom-left-radius(@radius);
+}
+
+// Drop shadows
+.box-shadow(@shadow) {
+  -webkit-box-shadow: @shadow;
+     -moz-box-shadow: @shadow;
+          box-shadow: @shadow;
+}
+
+// Box sizing
+.box-sizing(@boxmodel) {
+  -webkit-box-sizing: @boxmodel;
+     -moz-box-sizing: @boxmodel;
+          box-sizing: @boxmodel;
+}
+
+// Opacity
+.opacity(@opacity) {
+  opacity: @opacity / 100;
+  filter: ~"alpha(opacity=@{opacity})";
+}
+
+
+//Widgets
+#widget
+{
+    #list
+    {
+        .titles-only
+        {
+            margin-top: @baseLineHeight;
+            margin-bottom: @baseLineHeight;
+            .sfUnstyledList();
+        }
+
+        .simple-list
+        {
+            margin-top: @baseLineHeight / 4;
+            margin-bottom: @baseLineHeight;
+
+            .title
+            {
+                margin-top: 0;
+                margin-bottom: 0;
+                font-size: @fontSizeH5;
+            }
+        }
+
+        .titles-dates
+        {
+            .title
+            {
+                margin-top: 0;
+                margin-bottom: 0;
+                font-size: @fontSizeH5;
+            }
+
+            .list-items
+            {
+                margin-top: @baseLineHeight / 2;
+                margin-bottom: @baseLineHeight / 2;
+            }
+        }
+
+        .titles-dates-content
+        {
+            .title
+            {
+                margin-top: 0;
+                margin-bottom: 0;
+                font-size: @fontSizeH3;
+            }
+
+            .list-items
+            {
+                margin-top: @baseLineHeight * 1.5;
+                margin-bottom: @baseLineHeight * 2;
+            }
+
+            .rtf
+            {
+                margin-top: @baseLineHeight / 2;
+                margin-bottom: @baseLineHeight / 2;
+            }
+        }
+
+        .expanded-list
+        {
+            .title
+            {
+                margin-top: 0;
+                margin-bottom: 0;
+                font-size: @fontSizeH1;
+            }
+
+            .list
+            {
+                .sfUnstyledList();
+                margin-top: 0;
+                margin-bottom: @baseLineHeight * 2;
+
+                .list-items
+                {
+                    margin-top: @baseLineHeight;
+                    margin-bottom: @baseLineHeight;
+                }
+
+                .item-title
+                {
+                    margin-top: 0;
+                    margin-bottom: @baseLineHeight / 4;
+                    font-size: @fontSizeH3;
+                }
+
+                .to-top
+                {
+                    text-align: right;
+                    font-size: @fontSizeSmall;
+                }
+            }
+        }
+
+        .expandable-list
+        {
+            .title
+            {
+                margin-top: 0;
+                margin-bottom: 0;
+                font-size: @fontSizeH2;
+            }
+
+            .list
+            {
+                .sfUnstyledList();
+                margin-top: 0;
+                margin-bottom: @baseLineHeight * 2;
+
+                .list-items
+                {
+                    margin-top: @baseLineHeight/2.5;
+                    margin-bottom: @baseLineHeight/2.5;
+                }
+
+                .item-title
+                {
+                    margin-top: 0;
+                    margin-bottom: @baseLineHeight / 4;
+                    font-size: @fontSizeH4;
+
+                    .link
+                    {
+                        &:before
+                        {
+                            display: inline-block;
+                            content: "+";
+                            width: @baseLineHeight / 1.5;
+                            text-align: center;
+                        }
+
+                        &.expanded
+                        {
+                            &:before
+                            {
+                                content: "-";
+                            }
+                        }
+                    }
+                }
+
+                .rtf
+                {
+                    margin-bottom: @baseLineHeight;
+                    margin-left: @baseLineHeight;
+                }
+            }
+        }
+
+        .tmb-list
+        {
+            li
+            {
+                margin-bottom: @baseLineHeight/2;
+                margin-right: @baseLineHeight/2;
+                display: inline-block;
+                vertical-align: top;
+                text-align: center;
+                opacity: 0.8;
+                position: relative;
+
+                &:hover
+                {
+                    opacity: 1;
+                }
+
+                a:first-child
+                {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+           
+                .sfcommentsCounterWrp
+                {
+                    position: absolute;
+                    right: 1em;
+                    bottom: 1em;
+                    z-index: 100;
+                }
+            }
+        }
+
+        .go-comment
+        {
+            #icon;
+            #icon > .small-icon();
+            #icon > .comment();
+            color: @gray;
+        }
+
+        .more
+        {
+            font-size: @fontSizeSmall;
+        }
+    }
+
+    #table
+    {
+        td
+        {
+            padding-left: 15px;
+            padding-right: 15px;
+            line-height: 1.2;
+        }
+
+        tbody
+        {
+            td
+            {
+                padding-top: 15px;
+                padding-bottom: 20px;
+            }
+        }
+
+        .first
+        {
+            padding-left: 0;
+        }
+
+        .last
+        {
+            padding-right: 0;
+        }
+
+        .numeric
+        {
+            text-align: right;
+        }
+
+        .smaller
+        {
+            font-size: @fontSizeSmall;
+        }
+    }
+
+    #details
+    {
+        .title
+        {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .summary
+        {
+            margin-top: @baseLineHeight;
+            margin-bottom: @baseLineHeight;
+            color: @gray;
+            font-style: italic;
+        }
+
+        .rtf
+        {
+            margin-top: @baseLineHeight;
+            margin-bottom: @baseLineHeight;
+        }
+
+        .key-value
+        {
+            margin-top: @baseLineHeight / 4;
+            margin-bottom: @baseLineHeight / 4;
+
+            .key
+            {
+                display: inline;
+                font-weight: bold;
+            }
+
+            .value
+            {
+                display: inline;
+            }
+        }
+
+    }
+
+    .additional
+    {
+        font-size: @fontSizeSmall;
+        color: @gray;
+
+        .go-comment
+        {
+            margin-left: 10px;
+        }
+
+        .tooltip
+        {
+            margin-left: 10px;
+            display: inline-block;
+
+            .text
+            {
+                position: absolute;
+                font-size: @fontSizeSmall;
+                line-height: 1.4;
+                background-color: @infoBackground;
+                padding: @baseLineHeight / 2 @baseLineHeight;
+
+                strong
+                {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .additional-list
+    {
+        margin-top: @baseLineHeight;
+        margin-bottom: @baseLineHeight;
+        font-size: @fontSizeSmall;
+        color: @gray;
+    }
+}
+#icon
+{
+    background-color: transparent;
+    background-repeat: no-repeat;
+
+    .small-icon
+    {
+        background-image: @backgroundImageSprite;
+        padding-left: 20px;
+    }
+
+    .icon-elem
+    {
+        .hide-text-with-indent();
+        background-image: @backgroundImageSprite;
+        vertical-align: middle;
+
+        .clock
+        {
+            width: 16px;
+            height: 16px;
+            background-position: 0 -2500px;
+            cursor: help;
+        }
+
+        .ical
+        {
+            width: 15px;
+            height: 16px;
+            background-position: 0 -2100px;
+        }
+
+        .outlook
+        {
+            width: 15px;
+            height: 15px;
+            background-position: 0 -2200px;
+        }
+
+        .google-cal
+        {
+            width: 16px;
+            height: 16px;
+            background-position: 0 -2300px;
+        }
+
+        .delete
+        {
+            width: 11px;
+            height: 13px;
+            background-position: 0 -2400px;
+        }
+
+        .thread
+        {
+            background-image: @backgroundImageSpriteForums;
+            width: 20px;
+            height: 23px;
+            background-position: 0 -300px;
+        }
+
+        .locked-thread
+        {
+            background-image: @backgroundImageSpriteForums;
+            width: 20px;
+            height: 23px;
+            background-position: 0 -100px;
+        }
+
+        .announcement
+        {
+            background-image: @backgroundImageSpriteForums;
+            width: 15px;
+            height: 13px;
+            background-position: 0 -1100px;
+        }
+
+        .sticky
+        {
+            background-image: @backgroundImageSpriteForums;
+            width: 13px;
+            height: 13px;
+            background-position: 0 0;
+        }
+
+        .remove
+        {
+            background-image: @backgroundImageSpriteForums;
+            width: 18px;
+            height: 22px;
+            background-position: 5px -1195px;
+        }
+    }
+
+    .comment
+    {
+        background-position: 0 2px;
+    }
+
+
+    .rss
+    {
+        background-image: @backgroundImageSpriteForums;
+        background-position: 0 -400px;
+    }
+
+    .featured
+    {
+        background-image: @backgroundImageSpriteForums;
+        background-position: 0 -999px;
+        color: @green;
+    }
+
+    .quote
+    {
+        padding-left: 15px;
+        background-image: @backgroundImageSpriteForums;
+        background-position: 0 -798px;
+    }
+
+    .attachment
+    {
+        background-image: @backgroundImageSpriteForums;
+        background-position: 0 -600px;
+    }
+}
+.rad-editor(@maxWidth: 450px, @toolsMarginTop: -@baseLineHeight)
+{
+    max-width: @maxWidth;
+    position: relative;
+
+    .sfMoreTools
+    {
+        margin-top: @toolsMarginTop;
+
+        .sfChange
+        {
+        margin-top: @toolsMarginTop * 1.5;
+        }
+    }
+
+    table
+    {
+        margin-top: 0;
+        margin-bottom: 0;
+
+        tr:hover > td,
+        tr:hover > th
+        {
+            background-color: transparent;
+        }
+    }
+
+    .reToolbar
+    {
+        width: auto !important;
+
+        .sfChange
+        {
+            position: absolute;
+            top: 10px;
+            right: 5px;
+            font-size: @fontSizeMini;
+            color: @gray;
+            text-decoration: underline !important;
+            _width: 115px;
+            _text-align: right;
+        }
+    }
+}
+.upload
+{
+    &, & a, & input
+    {
+        font-size: inherit;
+        line-height: inherit;
+    }
+
+    .ruInputs
+    {
+        li, .ruActions
+        {
+            margin-top: @baseLineHeight / 2;
+            margin-bottom: @baseLineHeight / 2;
+        }
+
+        li:first-child
+        {
+            margin-top: 0;
+        }
+    }
+
+    .ruFileWrap
+    {
+        height: auto;
+
+        .ruFakeInput
+        {
+            padding: 4px 6px;
+            height: auto;
+            border-color: @inputBorder;
+        }
+
+        .ruBrowse
+        {
+            .btn();
+            .btn > .small();
+            .btn > .secondary();
+            margin-top: .2em;
+            margin-left: .6em;
+            background-image: none;
+        }
+    }
+
+    .ruRemove
+    {
+        margin-left: @baseLineHeight / 4;
+        #icon;
+        #icon > .icon-elem();
+        #icon > .icon-elem > .remove();
+    }
+
+    .ruAdd
+    {
+        background-image: none;
+        width: auto !important;
+        color: @linkColor;
+        cursor: pointer;
+        font-size: @fontSizeSmall;
+    }
+}
+#form-list
+{
+    .title
+    {
+        margin-top: 0;
+        font-size: @fontSizeH4;
+    }
+
+    .desc
+    {
+        font-style: italic;
+    }
+
+    .list
+    {
+        .sfUnstyledList();
+
+        .item
+        {
+            margin-bottom: @baseLineHeight;
+        }
+
+        .checkbox
+        {
+            input
+            {
+                margin-top: 0;
+            }
+
+            label
+            {
+                display: inline-block;
+                .ie7-inline-block();
+                margin-left: .2em;
+            }
+        }
+
+        .long-txt
+        {
+            textarea
+            {
+                width: @formLargeWidth * 1.5;
+            }
+        }
+
+        .image
+        {
+            .image-wrp
+            {
+                display: inline-block;
+                .ie7-inline-block();
+                vertical-align: top;
+                margin-right: 1em;
+            }
+
+            .change-lnk
+            {
+                font-size: @fontSizeSmall;
+            }
+        }
+    }
+
+    .btn-wrp
+    {
+        margin-top: @baseLineHeight * 1.5;
+
+        .link-btn
+        {
+            display: inline-block;
+            .ie7-inline-block();
+            margin-left: .5em;
+            font-size: @fontSizeSmall;
+        }
+    }
+}
+#filter-list
+{
+    .list
+    {
+        .sfUnstyledList();
+        .item
+        {
+            .selected
+            {
+                color: @black;
+                cursor: default;
+            }
+
+            .count
+            {
+                color: @grayLight;
+                font-size: @fontSizeMini;
+                vertical-align: top;
+                cursor: default;
+            }
+        }
+    }
+}
+#selector
+{
+    .wrapper
+    {
+        margin-top: @baseLineHeight / 2;
+        margin-bottom: @baseLineHeight / 2;
+        font-size: @fontSizeSmall;
+        .list
+        {
+            .sfUnstyledList();
+            margin-top: 0;
+            margin-bottom: 0;
+
+            .item
+            {
+                display: inline-block;
+                vertical-align: top;
+                margin-right: @baseLineHeight / 2;
+                line-height: 1.2;
+
+                .selected-lnk
+                {
+                    color: @black;
+                    cursor: default;
+                }
+            }
+        }
+    }
+}
+#nav
+{
+    .main
+    {
+        li
+        {
+            background-color: @blue;
+        }
+        a
+        {
+            display: block;
+            padding: 0 1.25em;
+            height: 2.875em;
+            line-height: 2.875em;
+            color: @white;
+            &:hover
+            {
+                background-color: @white;
+                color: @blue;
+            }
+            &.sfSel, &.sfSel:hover
+            {
+                background-color: @blueDark;
+                color: @white;
+            }
+        }
+    }
+}

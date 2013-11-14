@@ -1,0 +1,135 @@
+.sfsimpleListWrp, .sfpagelistListWrp
+{
+    .sflistTitle
+    {
+        #widget > #list > .simple-list > .title();
+    }
+
+    .sflistList
+    {
+        #widget > #list > .simple-list();
+    }
+}
+.sfexpandedListWrp
+{
+    .sflistTitle
+    {
+        #widget > #list > .expanded-list > .title();
+    }
+
+    .sflistList
+    {
+        #widget > #list > .expanded-list > .list();
+        .sflistListItem
+        {
+            #widget > #list > .expanded-list > .list > .list-items();
+            .sflistItemTitle
+            {
+                #widget > #list > .expanded-list > .list > .item-title();
+            }
+        }
+    }
+}
+.sfexpandableListWrp
+{
+    .sflistExpandAllLnkWrp
+    {
+        text-align: right;
+        font-size: @fontSizeSmall;
+    }
+
+    .sflistTitle
+    {
+        #widget > #list > .expandable-list > .title();
+    }
+
+    .sflistList
+    {
+        #widget > #list > .expandable-list > .list();
+
+        .sflistListItem
+        {
+            #widget > #list > .expandable-list > .list > .list-items();
+
+            .sflistItemTitle
+            {
+                #widget > #list > .expandable-list > .list > .item-title();
+
+                .sflistItemToggleLnk
+                {
+                    #widget > #list > .expandable-list > .list > .item-title > .link();
+
+                    
+                }
+                .sflistListItemExpanded
+                {
+                    #widget > #list > .expandable-list > .list > .item-title > .link.expanded();
+                }
+            }
+
+            .sflistItemContentExp
+            {
+                #widget > #list > .expandable-list > .list > .rtf();
+            }
+        }
+    }
+}
+.sfanchorListWrp
+{
+    margin-bottom: @baseLineHeight * 2;
+    .sfanchorListTitle
+    {
+        #widget > #list > .simple-list > .title();
+    }
+
+    .sfanchorList
+    {
+        #widget > #list > .simple-list();
+    }
+}
+.sfanchoredListWrp
+{
+    .sflistTitle
+    {
+        #widget > #list > .expanded-list > .title();
+    }
+
+    .sflistList
+    {
+        #widget > #list > .expanded-list > .list();
+        .sflistListItem
+        {
+            #widget > #list > .expanded-list > .list > .list-items();
+            .sflistItemTitle
+            {
+                #widget > #list > .expanded-list > .list > .item-title();
+            }
+
+            .sflistItemContent
+            {
+            }
+
+            .sflistTopLnkWrp
+            {
+                #widget > #list > .expanded-list > .list > .to-top();
+            }
+        }
+    }
+}
+.sflistItemDetails
+{
+    .sflistItemTitle
+    {
+        #widget > #details > .title();
+    }
+
+    .sflistItemContent
+    {
+        #widget > #details > .rtf();
+    }
+
+    .sfcommentsCounterWrp
+    {
+        margin-left: 0;
+    }
+}

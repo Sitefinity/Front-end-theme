@@ -1,0 +1,323 @@
+.sfeventsList
+{
+    #widget > #list > .titles-only();
+}
+.sfeventsListTitleCityDate
+{
+    .sfeventListItem
+    {
+        #widget > #list > .titles-dates > .list-items();
+    }
+
+    .sfeventTitle
+    {
+        #widget > #list > .titles-dates > .title();
+    }
+
+    .sfeventMetaInfo
+    {
+        #widget > .additional();
+
+        strong
+        {
+            font-weight: normal;
+        }
+
+        .sfeventCommentsCount
+        {
+            #widget > .additional > .go-comment();
+            #widget > #list > .go-comment();
+        }
+
+        .sfeventsRecurrenceTooltipWrp
+        {
+            #widget > .additional > .tooltip();
+
+            .sfeventsRecurrenceTooltipLnk
+            {
+                #icon();
+                #icon > .icon-elem();
+                #icon > .icon-elem > .clock();
+            }
+
+            .sfeventsRecurrenceTooltipText
+            {
+                #widget > .additional > .tooltip > .text();
+            }
+        }
+
+    }
+    .sfAddEventWrp
+    {
+        font-size: @fontSizeSmall;
+        color: @gray;
+        a
+        {
+            margin-left: 10px;
+        }
+        .sfical a
+        {
+            #icon();
+            #icon > .icon-elem();
+            #icon > .icon-elem > .ical();
+        }
+        .sfoutlook a
+        {
+            #icon();
+            #icon > .icon-elem();
+            #icon > .icon-elem > .outlook();
+        }
+        .sfgooglecalendar a
+        {
+            #icon();
+            #icon > .icon-elem();
+            #icon > .icon-elem > .google-cal();
+        }
+    }
+}
+.sfeventsListTitleCityDateContent
+{
+    .sfeventListItem
+    {
+        #widget > #list > .titles-dates-content > .list-items();
+    }
+
+    .sfeventTitle
+    {
+        #widget > #list > .titles-dates-content > .title();
+    }
+
+    .sfeventMetaInfo
+    {
+        #widget > .additional();
+        
+        strong
+        {
+            font-weight: normal;
+        }
+
+        .sfeventsRecurrenceTooltipWrp
+        {
+            #widget > .additional > .tooltip();
+
+            .sfeventsRecurrenceTooltipLnk
+            {
+                #icon();
+                #icon > .icon-elem();
+                #icon > .icon-elem > .clock();
+            }
+
+            .sfeventsRecurrenceTooltipText
+            {
+                #widget > .additional > .tooltip > .text();
+            }
+        }
+    }
+
+    .sfeventContent
+    {
+        #widget > #list > .titles-dates-content > .rtf();
+    }
+}
+.sfeventDetails
+{
+    .sfeventTitle
+    {
+        #widget > #details > .title();
+    }
+
+    .sfeventDatesLocationContacts
+    {
+        #widget > .additional-list();
+    }
+
+    .sfeventContent
+    {
+        #widget > #details > .rtf();
+    }
+    .sfcommentsCounterWrp
+    {
+        margin-left: 0;
+    }
+}
+.sfcalendarWrp
+{
+    position: relative;
+
+    .sfcalendar
+    {
+        width: 75%;
+        float: left;
+    }
+
+    .sfcalendarSidebar
+    {
+        width: 20%;
+        float: right;
+
+        .sfSubmitBtn
+        {
+            .btn();
+
+            &.sfCreateBtn
+            {
+                .btn .small();
+                position: absolute;
+                right: 25%;
+                z-index: 1000;
+                margin-top: .3em;
+                margin-right: .5em;
+            }
+        }
+
+        .sfcalendarListTitle
+        {
+            margin-top: @baseLineHeight/4;
+            margin-bottom: 0;
+            font-size: @fontSizeH5;
+        }
+
+        .sfcalendarList
+        {
+            .sfUnstyledList();
+            font-size: @fontSizeSmall;
+
+            li
+            {
+                margin-bottom: @baseLineHeight/2;
+                position: relative;
+
+                &:hover .sfdelete
+                {
+                    display: inline-block;
+                }
+            }
+
+            .sfColorWrp
+            {
+                display: inline-block;
+                margin-right: 5px;
+                padding: 0px 5px 3px;
+
+                input
+                {
+                    margin-top: 0;
+                }
+            }
+
+            label
+            {
+                position: absolute;
+                top: 0;
+                left: 30px;
+                right: 20px;
+                .text-overflow();
+            }
+
+            .sfdelete
+            {
+                #icon
+                ();
+                #icon > .icon-elem();
+                #icon > .icon-elem > .delete();
+                display: none;
+                position: absolute;
+                right: 0;
+                top: 2px;
+            }
+        }
+
+        .sfcalendarCreateNewWrp
+        {
+            margin-top: @baseLineHeight;
+
+            .sftoggleCreateCalendar
+            {
+                font-size: @fontSizeSmall;
+            }
+
+            .sfcalendarCreateNewList
+            {
+                .sfUnstyledList();
+
+                .sfcalendarCreateNewItm
+                {
+                    margin-bottom: @baseLineHeight / 2;
+                }
+            }
+
+            .sfSubmitBtnWrp
+            {
+                margin-top: @baseLineHeight;
+
+                .sfSubmitBtn
+                {
+                    .btn > .medium();
+                }
+
+                .sfCancel
+                {
+                    .cancel();
+                }
+            }
+        }
+    }
+}
+.sfcalendarEventPreviewWrp
+{
+    padding: @baseLineHeight !important;
+    border-color: @grayLight;
+    background-color: @white;
+    min-width: 450px !important;
+    box-shadow: 4px 4px 0 @grayMoreLighter;
+
+    .k-window-titlebar
+    {
+        margin-top: -25px !important;
+        padding-top: 0;
+        padding-bottom: 0;
+        border-bottom: 0;
+        width: auto;
+        right: 0;
+
+        .k-state-hover
+        {
+            border-color: @white;
+            background-color: transparent;
+            background-image: none;
+        }
+
+        .k-i-close
+        {
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-image: @backgroundImageSprite;
+            background-position: 0 -1200px;
+
+        }
+        .k-link:hover:not(.k-state-disabled) >  .k-i-close
+        {
+            background-position: 0 -1200px;
+        }
+    }
+
+    .sfcalendarEventPreviewTitle
+    {
+        margin-top: 0;
+        padding-bottom: 1em;
+        font-size: @fontSizeH4;
+        border-bottom: 1px solid @grayMoreLighter;
+    }
+
+    .sfcalendarEventPreviewStartDate
+    {
+        font-size: @fontSizeSmall;
+    }
+
+    .sfcalendarEventPreviewEditLnkWrp
+    {
+        text-align: right;
+        font-size: @fontSizeMini;
+        cursor: pointer;
+    }
+}

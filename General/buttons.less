@@ -1,0 +1,83 @@
+//
+// Buttons
+// --------------------------------------------------
+
+
+// Base styles
+// --------------------------------------------------
+
+// Core
+.btn
+{
+    display: inline-block;
+    .ie7-inline-block();
+    padding: 8px 25px;
+    margin-bottom: 0; // For input.btn
+    font-size: @fontSizeH5;
+    line-height: @baseLineHeight;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: @btnBackground;
+    color: @btnColor;
+    border: 0;
+    *border: 0; // Remove the border to prevent IE7's black border on input:focus
+    .border-radius(@baseBorderRadius);
+    .ie7-restore-left-whitespace(); // Give IE7 some love
+    // Hover/focus state
+    &:hover,
+    &:active,
+    &:focus
+    {
+        background-color: @btnBackgroundHighlight;
+        text-decoration: none;
+        color: @btnColor;
+    }
+    // Focus state for keyboard and accessibility
+    &:focus
+    {
+        .tab-focus();
+    }
+    // Disabled state
+    &.disabled,
+    &[disabled],
+    &:hover.disabled,
+    &:hover[disabled]
+    {
+        cursor: default;
+        background-color: @grayMoreLighter;
+    }
+
+    .secondary
+    {
+        background-color: @btnBackgroundHighlight;
+    }
+
+    .mini
+    {
+        padding: @paddingMini;
+        font-size: @fontSizeMini;
+    }
+
+    .small
+    {
+        padding: @paddingSmall;
+        font-size: @fontSizeSmall;
+    }
+
+    .medium
+    {
+        padding: @paddingMedium;
+        font-size: @fontSizeH6;
+    }
+    .large
+    {
+        padding: @paddingLarge;
+        font-size: @fontSizeH4;
+    }
+}
+.cancel
+{
+    margin-left: @baseLineHeight/2;
+    font-size: @fontSizeSmall;
+}

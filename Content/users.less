@@ -1,0 +1,176 @@
+.sfprofileArticleLikeWrp
+{
+    .sfprofileAvatar
+    {
+        float: left;
+        margin-right: 1em;
+        height: 6.25em;
+        width: 6.25em;
+        overflow: hidden;
+    }
+
+    .sfprofileField
+    {
+
+        .sfTxtLbl
+        {
+            display: none;
+        }
+
+        div
+        {
+            display: inline;
+        }
+
+        &.sfprofileName
+        {
+            font-weight: bold;
+            font-size: @fontSizeH5;
+        }
+    }
+
+    .sfprofileLnkWrp
+    {
+        margin-left: 7.25em;
+        padding-top: @baseLineHeight / 4;
+        clear: both;
+
+        a
+        {
+            margin-right: 1em;
+            font-size: @fontSizeSmall;
+        }
+
+    }
+}
+.sfprofileEditFormWrp
+{
+    .sfprofileFieldsList
+    {
+        #form-list > .list();
+
+        .sfprofileField
+        {
+            #form-list > .list > .item();
+        }
+
+        .sfprofileAbout
+        {
+            #form-list > .list > .long-txt();
+        }
+
+        .sfprofileAvatar
+        {
+            .sfPreviewImgFrame
+            {
+                #form-list > .list > .image > .image-wrp();
+            }
+
+            .sfChange, .sfCancel
+            {
+                #form-list > .list > .image > .change-lnk();
+            }
+        }
+    }
+
+    .sfprofileLnkWrp
+    {
+        #form-list > .btn-wrp();
+
+        .sfprofileSaveLnk
+        {
+            .btn();
+        }
+
+        .sfprofileCancelLnk
+        {
+            #form-list > .btn-wrp > .link-btn();
+        }
+    }
+}
+.sfusersListNameOnly
+{
+    #widget > #list > .titles-only();
+}
+.sfprofileChangePasswordFormWrp
+{
+    .sfprofileFieldsList
+    {
+        #form-list > .list();
+
+        .sfprofileField
+        {
+            #form-list > .list > .item();
+        }
+    }
+
+    .sfprofileLnkWrp
+    {
+        #form-list > .btn-wrp();
+
+        .sfprofileSaveLnk
+        {
+            .btn();
+        }
+
+        .sfprofileCancelLnk
+        {
+            #form-list > .btn-wrp > .link-btn();
+        }
+    }
+}
+.sfprofileSuccessMsg
+{
+    color: @successText;
+}
+.sfprofileFailureMsg
+{
+    color: @errorText;
+}
+.sfusersListNameAvatar
+{
+    .sfUnstyledList();
+    border-top: 1px solid @grayMoreLighter;
+
+    .sfusersListItem
+    {
+        padding-top: @baseLineHeight / 2;
+        padding-bottom: @baseLineHeight / 2;
+        border-bottom: 1px solid @grayMoreLighter;
+
+        .sfusersListAvatar
+        {
+            display: inline-block;
+            .ie7-inline-block();
+            margin-right: 1em;
+            vertical-align: middle;
+        }
+
+        .sfusersListLnk
+        {
+            font-weight: bold;
+            vertical-align: middle;
+        }
+    }
+}
+.sfregisterFormWrp
+{
+    .sfregisterFieldsList
+    {
+        #form-list > .list();
+        .sfregisterField
+        {
+            #form-list > .list > .item();
+        }
+    }
+
+    .sfregisterLnkWrp
+    {
+        #form-list > .btn-wrp();
+
+        .sfregisterSaveLnk
+        {
+            .btn();
+        }
+    }
+}

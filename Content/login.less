@@ -1,0 +1,80 @@
+.sfLoginWrp
+{
+    .sfLoginFieldsWrp
+    {
+        #form-list > .list();
+
+        .sfLoginField
+        {
+            #form-list > .list > .item();
+        }
+
+        .sfCheckBoxWrapper
+        {
+            #form-list > .list > .checkbox();
+        }
+    }
+
+    .sfSubmitBtn
+    {
+        .sfSave
+        {
+            .btn();
+        }
+    }
+
+    .sfLoginHelp
+    {
+        margin-top: @baseLineHeight;
+        font-size: @fontSizeSmall;
+
+        a
+        {
+            display: inline-block;
+            .ie7-inline-block();
+            margin-left: .5em;
+        }
+    }
+}
+#sfLoginWidgetWrp
+{
+    .sfLoginFieldsWrp
+    {
+        .sfUnstyledList();
+
+        & > li
+        {
+            #form-list > .list > .item();
+        }
+
+        .sfCheckBoxWrapper
+        {
+            #form-list > .list > .checkbox();
+        }
+
+        .sfLoginFieldsTitle
+        {
+            #form-list > .title();
+        }
+
+        .sfLoginFieldsNote
+        {
+            #form-list > .desc();
+        }
+    }
+
+
+    .sfSubmitBtnWrp
+    {
+        margin-top: @baseLineHeight;
+        .sfSubmitBtn
+        {
+            .btn();
+        }
+
+        .sfLostPassword
+        {
+            #form-list > .btn-wrp > .link-btn();
+        }
+    }
+}

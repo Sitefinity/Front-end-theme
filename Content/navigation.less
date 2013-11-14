@@ -1,0 +1,176 @@
+.sfNavHorizontal
+{
+    #nav > .main();
+    li
+    {
+        border-right: 1px solid @white;
+    }
+}
+.sfNavHorizontalDropDown
+{
+    #nav > .main();
+
+    &.k-menu .k-item > a.k-link 
+    {
+        padding: 0 1.25em;
+        height: 2.875em;
+        line-height: 2.875em;
+    }
+
+    background-color: @blue;
+
+    .k-item
+    {
+        margin-left: 0;
+        border-right: 1px solid @white;
+    }
+
+    > .k-item > a.k-link.sfSel, > .k-item > a.k-link.sfSel:hover
+    {
+        margin-top: -4px;
+        padding-top: 4px;
+    }
+
+    .k-group
+    {
+        border: 0 !important;
+    }
+
+    .k-popup
+    {
+        background-color: @blue;
+        border: 0;
+        margin-left: 0 !important;
+
+        .k-animation-container
+        {
+            border-left: 1px solid @white;
+        }
+
+        li
+        {
+            background-color: @blue;
+            border-top: 1px solid @white !important;
+        }
+    }
+
+
+    .k-i-arrow-s
+    {
+        background: transparent @backgroundImageSprite no-repeat 5px -975px !important;
+        width: 20px;
+
+        .k-state-hover &
+        {
+            background-position: 5px -975px !important;
+        }
+
+    }
+
+    .sfSel .k-i-arrow-s
+    {
+        background-position: 5px -1007px !important;
+    }
+
+    .k-i-arrow-e, .sfNavHorizontalDropDown .k-i-arrow-e
+    {
+        background: transparent @backgroundImageSprite no-repeat 5px -946px !important;
+
+        .k-state-hover &
+        {
+            background-position: 5px -946px !important;
+        }
+    }
+}
+.sfNavHorizontalTabs
+{
+    #nav > .main();
+
+    &.sfLevel1
+    {
+        li
+        {
+            margin-left: 0;
+            border-right: 1px solid @white;
+        }
+
+        a.sfSel, a.sfSel:hover
+        {
+            margin-top: -4px;
+            padding-top: 4px;
+        }
+    }
+
+    &.sfLevel2
+    {
+        background-color: @blueDark;
+
+        li
+        {
+            background-color: @blueDark;
+        }
+
+        a
+        {
+            &:hover
+            {
+                color: @blueDark;
+            }
+
+            &.sfSel, &.sfSel:hover
+            {
+                color: @white;
+            }
+        }
+    }
+}
+.sfNavVertical
+{
+    #nav > .main();    
+    li
+    {
+        border-bottom: 1px solid @white;
+    }
+}
+.sfNavTreeview
+{
+    .k-minus, .k-plus
+    {
+        background-color: transparent;
+        background-image: @backgroundImageSprite;
+        background-repeat: no-repeat;
+    }
+    .k-minus
+    {
+        background-position: 3px -976px;
+    }
+    .k-plus
+    {
+        background-position: 3px -946px;
+    }
+    .k-in.k-state-hover, .k-in.k-state-selected, .k-in.k-state-focused 
+    {
+        border-width: 0 !important;
+        padding: 2px 4px 2px 3px !important;
+    }
+}
+.sfNavHorizontalSiteMap
+{
+
+    li li a
+    {
+        font-size: @fontSizeSmall;
+    }
+
+    ul
+    {
+        margin-left: 0;
+    }
+}
+.sfNavVerticalSiteMap
+{
+    li li a
+    {
+        font-size: @fontSizeSmall;
+    }
+}

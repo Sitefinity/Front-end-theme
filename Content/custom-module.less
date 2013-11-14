@@ -1,0 +1,107 @@
+.sfitemsList
+{
+    #widget > #list > .titles-only();
+
+    .sfitem
+    {
+        .clearfix();
+        #widget > #list > .titles-dates-content > .list-items();
+    }
+
+    .sfimageWrp
+    {
+        float: left;
+        margin-right: 1em;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .sfitemTitle
+    {
+        #widget > #list > .titles-dates > .title();
+    }
+
+    .sfitemPublicationDate
+    {
+        #widget > .additional();
+    }
+
+    .sfcommentsCounterWrp
+    {
+        margin-left: 0;
+        font-size: @fontSizeSmall;
+    }
+}
+.sfitemDetails
+{
+    .sfitemTitle
+    {
+        #widget > #details > .title();
+    }
+
+    .sfitemPublicationDate
+    {
+        #widget > .additional();
+    }
+
+    .sfitemLongText
+    {
+        #widget > #details > .summary();
+    }
+
+    .sfitemRichText
+    {
+        #widget > #details > .rtf();
+    }
+
+    .sfitemShortTxtWrp, .sfitemChoices, .sfitemDateWrp, .sfitemNumberWrp, .sfitemTaxonWrp
+    {
+        #widget > #details > .key-value();
+    }
+
+    .sfTxtLbl, .sfitemFieldLbl, .sfitemFieldLbl
+    {
+        #widget > #details > .key-value > .key();
+    }
+
+    .sfitemShortTxt, .sfChoiceContent, .sfitemDate, .sfitemNumber
+    {
+        #widget > #details > .key-value > .value();
+    }
+
+    .sfitemTaxonWrp
+    {
+        > div
+        {
+            display: inline;
+        }
+
+        .sfTagsList, .sfCategoriesList
+        {
+            .sfUnstyledList();
+            display: inline;
+
+            li
+            {
+                display: inline;
+                span:before {
+                    content: ", ";
+                }
+                &:first-child span:before {
+                    content: "";
+                }
+            }
+        }
+    }
+
+    .sfitemRichText, .sfimageWrp, .sfimagesTmbList, .sfdownloadFileWrp, .sfdownloadList, .sfvideoWrp, .sfvideosTmbList, .sfitemAddressWrp
+    {
+        margin-top: @baseLineHeight * 1.5;
+        margin-bottom: @baseLineHeight * 1.5;
+    }
+    .sfcommentsCounterWrp
+    {
+        margin-left: 0;
+        font-size: @fontSizeSmall;
+    }
+}

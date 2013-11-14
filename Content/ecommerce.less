@@ -1,0 +1,1817 @@
+.sfproductPrice
+{
+    font-size: @fontSizeH5;
+    font-weight: normal;
+}
+.sfNewPrice
+{
+    color: @green;
+    font-weight: bold;
+
+    .sfprintInvoiceWrp &
+    {
+        color: @black
+    }
+}
+.sfVatIncluded
+{
+    font-size: @fontSizeSmall;
+    color: @gray;
+}
+.sfOrgPrice
+{
+    text-decoration: line-through;
+}
+.sfPercentOffPrice
+{
+    font-size: @fontSizeSmall;
+    color: @grayLight;
+    font-style: italic;
+}
+.sfDiscount
+{
+    color: @green;
+}
+#fancybox-wrap 
+{
+    z-index: 9999;
+}
+.sfproductsList
+{
+    #widget > #list > .titles-only();
+    clear: both;
+
+    .sfproductListItem
+    {
+        display: inline-block;
+        vertical-align: top;
+        padding: 1em;
+        width: @productsTmbWidth;
+        overflow: hidden;
+    }
+
+    .sfproductTmbWrp
+    {
+        width: @productsTmbWidth;
+        height: @productsTmbWidth;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .sfproductTitle
+    {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: @fontSizeH5;
+    }
+}
+.sfproductDetails
+{
+    .sfproductImgsWrp
+    {
+        float: left;
+        width: 290px;
+        overflow: hidden;
+
+        .sfproductMainImgWrp
+        {
+            text-align: center;
+
+            img
+            {
+                max-width: 200px;
+                max-height: 200px;
+            }
+        }
+
+        .sfproductImgsList
+        {
+            #widget > #list > .titles-only();
+
+            .sfproductImgWrp
+            {
+                display: inline-block;
+                margin: .5em .5em 0 0;
+                width: 85px;
+                height: 85px;
+                line-height: 85px;
+                overflow: hidden;
+                text-align: center;
+
+                &:hover
+                {
+                    background-color: @grayLightest;
+                }
+
+                .sfproductImgLnk, .sfproductImg
+                {
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+
+    .sfproductInfoWrp
+    {
+        margin-left: 310px;
+
+        .sfproductTitle
+        {
+            margin-top: 0;
+            margin-bottom: 0;
+
+            .sfPromo
+            {
+                color: @green;
+            }
+        }
+
+        .sfproductPrice
+        {
+            margin-top: @baseLineHeight;
+            margin-bottom: @baseLineHeight;
+            padding-top: .5em;
+            padding-bottom: .5em;
+            border-top: 1px solid @grayLighter;
+            border-bottom: 1px solid @grayLighter;
+        }
+    }
+
+    .sfproductDynamicFieldsList
+    {
+        .sfUnstyledList();
+        margin-top: @baseLineHeight;
+        margin-bottom: @baseLineHeight;
+
+        .sfproductField
+        {
+            display: inline;
+        }
+    }
+
+    .sfproductDescription
+    {
+        margin-top: @baseLineHeight;
+        margin-bottom: @baseLineHeight;
+    }
+
+
+    .sfInSidebar &
+    {
+        .sfproductImgsWrp
+        {
+            float: none;
+            width: auto;
+            overflow: hidden;
+        }
+
+        .sfproductInfoWrp
+        {
+            margin-left: 0;
+        }
+    }
+}
+.sfBuyNowBtnWrp
+{
+    margin-left: 310px;
+}
+.sfproductOptionsList
+{
+    .sfUnstyledList();
+    margin-top: @baseLineHeight;
+    margin-bottom: @baseLineHeight;
+
+    .sfproductOption
+    {
+        margin-top: @baseLineHeight / 2;
+    }
+
+    label
+    {
+        display: block;
+    }
+}
+.sfProductInventoryWrp
+{
+    margin-top: @baseLineHeight / 2;
+}
+.sfproductAddChargeWrp
+{
+    margin-top: @baseLineHeight / 2;
+}
+.sfProductDocumentsAndFiles
+{
+    margin-top: @baseLineHeight;
+    margin-bottom: @baseLineHeight;
+
+    .sfProductfilesTitle
+    {
+        margin-top: 0;
+        margin-bottom: @baseLineHeight / 2;
+        font-size: @fontSizeH5;
+    }
+
+    .sfdigitalDownloadsListWrp
+    {
+        .sfdownloadList
+        {
+            margin-top: 0;
+
+            table
+            {
+                margin-top: 0;
+                color: @grayLight;
+            }
+
+            .sfdownloadFile
+            {
+                display: inline-block;
+                margin-top: 0;
+                margin-bottom: 0;
+                min-height: 35px;
+            }
+        }
+    }
+}
+.sfAddToCartWrp
+{
+    margin-top: @baseLineHeight;
+
+    .sfTxtLbl
+    {
+        display: block;
+    }
+    .sfTxt
+    {
+        width: 3em;
+    }
+    .sfAddToCartBtn
+    {
+        .btn();
+        .btn > .medium();
+        margin-left: .5em;
+    }
+    .sfError
+    {
+        display: block;
+        margin-bottom: 1em;
+    }
+}
+.sfAddToWishlistWidget
+{
+    margin-left: 4.5em;
+
+    .sfAddToWishListLnkWrp
+    {
+        font-size: @fontSizeSmall;
+    }
+    .sfMessage
+    {
+        margin-top: 1em;
+        padding: 0.5em;
+        display: inline-block;
+        line-height: 1.2;
+    }
+}
+.sfSortByWrp
+{
+    margin-bottom: @baseLineHeight;
+    text-align: right;
+    font-size: @fontSizeSmall;
+
+    label
+    {
+        display: inline;
+    }
+
+    label, input
+    {
+        vertical-align: middle;
+    }
+}
+.sfCatalogTotalCount
+{
+    float: left;
+    color: @gray;
+    font-style: italic;
+}
+.sfCatalogPager
+{
+    float: right;
+
+    .sf_pagerNumeric
+    {
+        display: inline;
+    }
+}
+.sfitemsPerPageWrp
+{
+    text-align: center;
+    font-size: @fontSizeSmall;
+    color: @grayLight;
+
+    a
+    {
+        padding-left: .5em;
+        padding-right: .5em;
+        text-decoration: underline;
+    }
+
+    a:hover, a:focus, .aspNetDisabled
+    {
+        text-decoration: none;
+    }
+}
+.sfcartExpandableLoading
+{
+    background: transparent @backgroundImageSpriteLoading;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.sfLoadingDataImage
+{
+    background: transparent @backgroundImageSpriteLoading no-repeat 0 1px;
+    height: 20px;
+    width: 30px;
+    display: block;
+}
+.sfcartSummaryWrp
+{
+    .sfminiShoppingCart
+    {
+        empty-cells: show;
+        table-layout: fixed;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+
+        td
+        {
+            padding: .5em 0;
+            border-bottom: 1px solid @grayLighter;
+            vertical-align: top;
+        }
+
+        .sfItmTmbCol
+        {
+            img
+            {
+                max-width: 36px;
+                max-height: 36px;
+            }
+        }
+
+        .sfItmTitleCol
+        {
+            padding-left: .5em;
+            padding-right: .5em;
+
+            .sfItmTitle
+            {
+                line-height: 1.2;
+            }
+
+            .sfproductOptions
+            {
+                margin-top: .2em;
+                font-size: @fontSizeSmall;
+                color: @gray;
+                line-height: 1.2;
+            }
+        }
+
+        .sfItmPriceCol
+        {
+            text-align: right;
+
+            div
+            {
+                display: inline;
+            }
+
+            .sfVatIncluded
+            {
+                display: block;
+            }
+        }
+    }
+    
+    .sfPriceTotal
+    {
+        margin-top: 1em;
+        margin-bottom: 1.5em;
+        text-align: right;
+
+        .sfPrice
+        {
+            font-size: @fontSizeH5;
+        }
+    }
+
+    .sfcartSummaryBtnsWrp
+    {
+        text-align: right;
+
+        .sflnkToCart
+        {
+            float: left;
+            padding-top: .5em;
+            font-size: @fontSizeSmall;
+        }
+
+        .sfCheckoutBtn
+        {
+            .btn();
+        }
+    }
+}
+.sfcartSummaryExpandableWrp
+{
+    position: relative;
+    max-width: 14em;
+
+    .sflnkToggleCartWrp
+    {
+        padding: .5em;
+        border: 1px solid @grayLight;
+        position: relative;
+        z-index: 8100;
+        background-color: @white;
+
+        .sfcartSummaryItemsCount
+        {
+            display: block;
+            margin-top: -.5em;
+            font-size: @fontSizeSmall;
+            font-weight: normal;
+            color: @black;
+        }
+
+        .sfcartSummaryNoItems
+        {
+            display: block;
+            margin-top: -.5em;
+            font-size: @fontSizeSmall;
+            color: @gray;
+        }
+    }
+
+    &.sfcartSummaryExpanded
+    {
+        .sflnkToggleCartWrp
+        {
+            border-bottom: 0;
+        }
+    }
+
+    .sflnkToggleCartWrpIn
+    {
+        background: transparent @backgroundImageSpriteEcommerce no-repeat 100% -486px;
+    }
+
+    .sflnkToggleCart
+    {
+        display: block;
+        padding-left: 32px;
+        background: transparent @backgroundImageSpriteEcommerce no-repeat 0 -598px;
+    }
+
+    .sfcartSummaryDetailsWrp
+    {
+        position: absolute;
+        right: 0;
+        top: 57px;
+        z-index: 8000;
+        width: 18em;
+        padding: 1em 1em 2em;
+        border: 1px solid @grayLight;
+        background-color: @white;
+
+        .sfcartSummaryNoItems
+        {
+            text-align: center;
+            padding: 1.25em 0.625em;
+        }
+    }
+}
+.sfcartSummaryBlockWrp
+{
+    width: 18em;
+    padding: 1em 1em 2em;
+    border: 1px solid @grayLight;
+    background-color: @white;
+
+    .sfcartSummaryTitle
+    {
+        margin-top: 0;
+        margin-bottom: .5em;
+        padding-left: 40px;
+        background: transparent @backgroundImageSpriteEcommerce no-repeat 0 -600px;
+        font-size: @fontSizeH4;
+
+        strong
+        {
+            font-weight: normal;
+        }
+    }
+}
+.sfcartSummarySimpleWrp
+{
+    color: @gray;
+    .sflnkToCart
+    {
+        padding-left: 24px;
+        background: transparent @backgroundImageSpriteEcommerce no-repeat 0 0;
+    }
+}
+.sfshoppingCartWrp
+{
+    .sfshoppingCartTitle
+    {
+    }
+
+    .sfProductsInCart
+    {
+        color: @grayLight;
+        font-style: italic;
+    }
+
+    .sfshoppingCartWrp .sfNoProductsInCartMsg
+    {
+        margin: 1em 0 2.5em;
+    }
+
+    .sfShoppingCartGridFooter
+    {
+        padding-top: .5em;
+        padding-bottom: 1em;
+
+        .sfTotalRowWrp
+        {
+            clear: both;
+            float: right;
+            *float: none;
+            _float: none;
+            width: 100%;
+            margin-top: .5em;
+            padding-top: .5em;
+            border-top: 1px solid @grayLighter;
+            text-align: right;
+
+            .sfPriceTotal
+            {
+                display: inline-block;
+                font-size: @fontSizeH4;
+                font-weight: bold;
+                width: 5em;
+            }
+        }
+
+        .sfshoppingCartUpdateLnk
+        {
+            float: right;
+            clear: both;
+            font-size: @fontSizeSmall;
+            padding-left: 18px;
+            background: transparent @backgroundImageSprite no-repeat 0 -1393px;
+        }
+
+        .sfShoppingCartTotal
+        {
+            float: right;
+            width: 50%;
+            text-align: right;
+
+            .sfShoppingCartDiscountList
+            {
+                margin-top: 0;
+                margin-bottom: 0;
+                float: right;
+                border-collapse: collapse;
+                font-size: @fontSizeSmall;
+
+                tr:hover th, tr:hover td
+                {
+                    background-color: transparent;
+                }
+
+                th, td
+                {
+                    padding: 0;
+                    border-top: 0;
+                    text-align: right;
+                    vertical-align: top;
+                }
+
+                th
+                {
+                    font-weight: normal;
+                }
+
+                td
+                {
+                    text-align: right;
+
+                    &.sfDiscountAmountCol
+                    {
+                        color: @red;
+                    }
+                }
+            }
+
+            .sfChangeCouponCodeToggleMessage
+            {
+                font-size: @fontSizeSmall;
+            }
+        }
+
+
+        
+    }
+
+    .sfshoppingCartBtnsWrp
+    {
+        padding-top: 1em;
+        text-align: right;
+        border-top: 1px solid @grayLighter;
+
+        .sfBackBtn
+        {
+            float: left;
+            padding-left: 18px;
+            background: transparent @backgroundImageSprite no-repeat 0 -1097px;
+            line-height: 1.2;
+        }
+
+        .sfCheckoutBtn
+        {
+            .btn();
+        }
+    }
+}
+.sfcouponCodeEntryViewWrap
+{
+    float: left;
+    text-align: left;
+
+    .sfExpandCouponEntryField
+    {
+        padding-left: 17px;
+        background: transparent @backgroundImageSprite no-repeat 0 -947px;
+        font-size: @fontSizeSmall;
+
+        &.sfExpanded
+        {
+            background-position: 0 -976px;
+        }
+    }
+
+    .sfCouponEntryField
+    {
+        padding-bottom: 1em;
+        padding-left: 1em;
+        .sfCouponCodeItem
+        {
+            margin-left: 1em;
+            .secondary();
+        }
+    }
+
+}
+.sfCouponEntryField
+{
+    .sfTxt
+    {
+        width: 12em;
+    }
+
+    .sfApplyCouponBtn
+    {
+        .btn();
+        .medium();
+    }
+
+    .sfMsgVisible
+    {
+        display: inline-block;
+
+        &.sfMsgNegative
+        {
+            color: @errorText;
+            background-color: transparent !important;
+        }
+        &.sfMsgPositive
+        {
+            color: @successText;
+            background-color: transparent !important;
+        }
+    }
+
+    &.sfCouponEntryFieldHidden
+    {
+        display: none;
+    }
+
+    &.sfCouponCodeEntryFieldChangeMode
+    {
+        /*position: relative;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        right: -120px;
+        text-align: left;*/
+        .sfCouponCodeItem
+        {
+            display: block;
+        }
+    }
+
+    &.sfCouponCodeEntryFieldListMode
+    {
+        margin-bottom: 1em;
+        margin-right: 7em;
+        margin-top: .5em;
+    }
+
+    .sfCouponCodeItem
+    {
+        font-size: @fontSizeSmall;
+    }
+}
+.RadGrid_Basic
+{
+
+    .rgMasterTable
+    {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0;
+        width: 100%;
+        table-layout: fixed !important;
+    }
+
+    th, td
+    {
+        vertical-align: top;
+    }
+
+    tr:hover th, tr:hover td
+    {
+        background-color: transparent;
+    }
+
+    thead
+    {
+        th
+        {
+            color: @grayLight;
+            font-size: @fontSizeMini;
+        }
+    }
+
+
+    tfoot
+    {
+        td
+        {
+            padding-top: 1em;
+            padding-bottom: 1em;
+        }
+
+        .sfItmPriceCol
+        {
+            font-size: @fontSizeH5;
+
+            .sfPriceTotal
+            {
+                font-size: @fontSizeH4;
+                font-weight: bold;
+            }
+
+            .sfshoppingCartUpdateLnk
+            {
+                font-size: @fontSizeSmall;
+                padding-left: 18px;
+                background: transparent @backgroundImageSprite no-repeat 0 -1399px;
+            }
+        }
+    }
+
+
+    tbody
+    {
+        td
+        {
+            padding-top: 1em;
+            padding-bottom: 1.5em;
+            border-bottom: 1px solid @grayLighter;
+        }
+
+        .sfItmPriceCol
+        {
+            font-size: @fontSizeH4;
+        }
+
+        .sfItmOptionsCol
+        {
+            font-size: @fontSizeSmall;
+            line-height: 1.3;
+        }
+    }
+
+    .sfItmTmbCol
+    {
+        width: 80px;
+        overflow: hidden;
+    }
+
+    .sfItmTitleCol
+    {
+        .sfItmTitle
+        {
+            font-size: @fontSizeH4;
+        }
+
+        .sfItmLnksWrp
+        {
+            margin-top: 1em;
+        }
+
+        .sfToWishList, .sfToCart, .sfItmRemove
+        {
+            margin-right: 1em;
+            padding-left: 18px;
+            font-size: @fontSizeSmall;
+            .secondary();
+        }
+
+        .sfItmRemove
+        {
+            background: transparent @backgroundImageSprite no-repeat 0 -1198px;
+        }
+
+        .sfToWishList, .sfToCart
+        {
+            background: transparent @backgroundImageSprite no-repeat 0 -1298px;
+        }
+
+        .sfToCartBtn
+        {
+            margin-right: 1em;
+            padding: 3px 3px 2px;
+            font-size: @fontSizeSmall;
+        }
+
+        .sfItmSku
+        {
+            font-size: @fontSizeSmall;
+            color: @gray;
+        }
+
+        .sfdownloadFile
+        {
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 0;
+            margin-bottom: 0;
+            min-height: 35px;
+
+            & + .sfInfo
+            {
+                margin-top: -.5em;
+                padding-left: 43px;
+                font-size: 1em;
+                color: @grayLight;
+            }
+        }
+    }
+
+    .sfItmOptionsCol
+    {
+        width: 8em;
+        white-space: nowrap;
+        /*div
+        {
+             margin-top: 0.7em;
+        }*/
+    }
+
+    .sfSingleItmPriceCol
+    {
+        padding-right: 0;
+        text-align: right;
+        width: 6.25em;
+
+        tbody &
+        {
+            line-height: 1.2;
+        }
+
+        div
+        {
+            margin-top: 0.45em;
+        }
+    }
+
+    .sfItmQuantityCol
+    {
+        width: 6.25em;
+        text-align: right;
+
+        .sfTxt
+        {
+            width: 2.5em;
+        }
+
+        .sfError
+        {
+            display: block;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+    }
+
+    .sfItmPriceCol
+    {
+        text-align: right;
+        white-space: nowrap;
+        width: 6.25em;
+        padding-top: .5em;
+    }
+
+    .sfdigitalDownloadsPurchasedCol
+    {
+        text-align: right;
+        color: @grayLight;
+    }
+}
+.sfDiscountsWrp
+{
+    .rgMasterTable
+    {
+        margin-left: auto;
+        width: auto !important;
+    }
+
+    tbody
+    {
+        td
+        {
+            padding: 0 0 0 0.5em;
+            border-bottom: 0;
+            border-top: 0;
+            text-align: right;
+        }
+
+        .sfAmountCol
+        {
+            color: @green;
+        }
+    }
+}
+.sfwishListWrp
+{
+    .sfNoProductsInCartMsg
+    {
+        margin: 1em 0 2.5em;
+    }
+
+    .sfProductsInCart
+    {
+        color: @grayLight;
+        font-style: italic;
+    }
+
+    .sfWishlistPrivate, .sfWishlistPublic
+    {
+        float: right;
+        margin-top: -4em;
+        font-size: @fontSizeSmall;
+    }
+
+    .sfWishlistPrivate .sfLIsPrivate, .sfWishlistPublic .sfLIsPublic
+    {
+        padding: 2px 8px 1px 18px;
+        font-style: normal;
+        background: transparent @backgroundImageSprite no-repeat -1000px -1000px;
+    }
+
+    .sfWishlistPrivate .sfLIsPrivate
+    {
+        background-position: 0 -1999px;
+    }
+
+    .sfWishlistPublic .sfLIsPublic
+    {
+        background-position: 0 -1899px;
+    }
+
+    .sfWishlistPrivate a, .sfWishlistPublic a
+    {
+        .secondary();
+    }
+    .sfforumSocialShareWrp
+    {
+        float: right;
+    }
+    .sfWishlistUpdate
+    {
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        .sfshoppingCartUpdateLnk
+        {
+            float: right;
+            clear: both;
+            font-size: @fontSizeSmall;
+            padding-left: 18px;
+            background: transparent @backgroundImageSprite no-repeat 0 -1393px;
+        }
+    }
+    .sfwishListBtnsWrp 
+    {
+        padding-top: 1em;
+        text-align: right;
+        border-top: 1px solid @grayLighter;
+
+        .sfBackBtn, .sfForwardBtn
+        {
+            line-height: 1.2;
+            background: transparent @backgroundImageSprite no-repeat -1000px -1000px;
+        }
+        .sfBackBtn
+        {
+            float: left;
+            padding-left: 18px;
+            background-position: 0 -1097px;
+        }
+        .sfForwardBtn
+        {
+            float: right;
+            padding-right: 18px;
+            background-position: 100% -1797px;
+        }
+    }
+}
+.sfcheckoutTabstrip
+{
+    line-height: 1.3;
+
+    .rtsUL
+    {
+        border-left: 1px solid @grayMoreLighter;
+        overflow: visible !important;
+
+        .rtsLI
+        {
+            border-top: 1px solid @grayMoreLighter;
+            border-bottom: 1px solid @grayMoreLighter;
+            overflow: visible;
+            line-height: 1.5;
+
+            .rtsLink
+            {
+                padding: 0 30px 0 0;
+                background: @white @backgroundImageSpriteEcommerce no-repeat 100% -100px;
+                color: @grayMoreLighter;
+                position: relative;
+                .rtsOut
+                {
+                    padding: 0 0 0 15px;
+                    height: 34px;
+                    .rtsIn, .rtsTxt
+                    {
+                        display: inline;
+                        padding: 0;
+                    }
+                    .sfStep
+                    {
+                        position: relative;
+                        top: 1px;
+                        padding-right: 3px;
+                        font-size: @fontSizeH4;
+                        font-weight: normal;
+                    }
+                }
+        
+            }        
+            &.rtsLast .rtsLink
+            {
+                margin-right: -17px;
+            }
+
+        }
+    }
+
+    &.sfCStep1 .rtsLink.sfStep1,
+    &.sfCStep2 .rtsLink.sfStep1,
+    &.sfCStep2 .rtsLink.sfStep2,
+    &.sfCStep3 .rtsLink.sfStep1,
+    &.sfCStep3 .rtsLink.sfStep2,
+    &.sfCStep3 .rtsLink.sfStep3,
+    &.sfCStep4 .rtsLink.sfStep1,
+    &.sfCStep4 .rtsLink.sfStep2,
+    &.sfCStep4 .rtsLink.sfStep3,
+    &.sfCStep4 .rtsLink.sfStep4
+    {
+        background-color: @grayLightest;
+        background-position: 100% -300px;
+        color: @gray;    
+    }
+    &.sfCStep0 .rtsLink.sfStep1,
+    &.sfCStep1 .rtsLink.sfStep2,
+    &.sfCStep2 .rtsLink.sfStep3,
+    &.sfCStep3 .rtsLink.sfStep4,
+    &.sfCStep4 .rtsLink.sfStep5
+    {
+        background-color: @grayLightest;
+        background-position: 100% -200px;
+        color: @black;    
+    }
+    &.sfCStep4 .rtsLast .rtsLink.sfStep4
+    {
+        background-color: @grayLightest;
+        background-position: 100% -200px;
+        color: @black;    
+    }
+}
+.sfcheckoutMulitPage
+{
+    .sfcheckoutStepTitle
+    {
+        font-size: @fontSizeH4;
+    }
+
+    .sfcheckoutFormWrp
+    {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 2em;
+
+        &.sfcheckoutBillingFormWrp
+        {
+            margin-right: 0;
+        }
+        .sfcheckoutFormList
+        {
+            .sfUnstyledList();
+        }
+    }
+
+    .sfcheckoutFormItm
+    {
+        margin-bottom: @baseLineHeight;
+
+        .sfPostalCode
+        {
+            width: 4em;
+        }
+
+
+        &.sfcheckoutFormItmSep
+        {
+            margin-top: 4em;
+        }
+    }
+
+    .sfcheckoutFormItmCheckbox
+    {
+
+        label, input
+        {
+            vertical-align: middle;
+        }
+
+        label
+        {
+            display: inline-block;
+            margin-left: .2em;
+        }
+    }
+
+    .sfcheckoutFormItmDdl
+    {
+        .sfTxtLbl
+        {
+            display: block;
+        }
+
+        .RadComboBox
+        {
+            margin-right: 1em;
+            display: inline-block;
+        }
+    }
+
+    .sfcheckoutBtnsWrp
+    {
+        margin-top: @baseLineHeight * 1.5;
+
+        .sfcheckoutContinueBtn
+        {
+            .btn();
+        }
+    }
+
+    .sfcheckoutFormItmCheckboxList
+    {
+        .sfUnstyledList();
+        margin-top: @baseLineHeight * 1.5;
+
+        li
+        {
+            margin-bottom: @baseLineHeight / 2;
+
+            label
+            {
+                .choice-wrp > .lbl();
+            }
+        }
+
+        .sfPaymentMethodList
+        {
+            list-style-type: none;
+            margin-left: 0;
+        }
+    }
+
+
+    .sfcheckoutPaymentFormWrp
+    {
+        .sfUnstyledList();
+
+        .sfcheckoutFormItmCheckboxList
+        {
+            margin-top: @baseLineHeight;
+        }
+    }
+}
+.sfStep4Wrp
+{
+    .sfMessage
+    {
+        margin-top: @baseLineHeight;
+        margin-bottom: @baseLineHeight;
+        padding: 0.5em 1em;
+    }
+    .sfcheckoutPreviewAddress
+    {
+        float: left;
+        line-height: 1.2;
+        width: 15em;
+
+        .sfcheckoutStepTitle
+        {
+            display: block;
+            margin-bottom: 0;
+            font-weight: bold;
+            font-size: 1em;
+        }
+
+        .sfcheckoutPreviewAddressBlock
+        {
+            span
+            {
+                display: block;
+            }
+        }
+
+        a
+        {
+            font-size: @fontSizeSmall;
+        }
+    }
+
+    .sfcheckoutPreviewProduct
+    {
+        margin-left: 17em;
+    }
+}
+.sfStep5Wrp
+{
+    .sfMessage
+    {
+        margin-top: @baseLineHeight * 2;
+        font-weight: bold;
+        text-align: center;
+
+        &:before
+        {
+            display: block;
+            content: " ";
+            margin: 20px auto 15px;
+            width: 138px;
+            height: 138px;
+            background: transparent @backgroundImageSpriteBigStatusIcon no-repeat -1000px -1000px;
+        }
+
+        &.sfMsgPositive
+        {
+            color: @successText;
+
+            &:before
+            {
+                background-position: 0 0;
+            }
+        }
+        &.sfMsgNegative
+        {
+            color: @errorText;
+
+            &:before
+            {
+                background-position: 0 -140px;
+            }
+        }
+    }
+}
+.sfcheckoutTotalPriceWrp
+{
+    text-align: right;
+    list-style-type: none;
+
+    li
+    {
+        padding-left: .5em;
+        padding-right: .5em;
+    }
+
+    .sfcheckoutShipping
+    {
+        margin-top: @baseLineHeight;
+        margin-bottom: @baseLineHeight * 1.5;
+    }
+
+    .sfcheckoutTotal
+    {
+        margin-top: @baseLineHeight;
+        padding-top: @baseLineHeight;
+        padding-bottom: @baseLineHeight;
+
+        background-color: @grayLightest;
+        font-size: @fontSizeH5;
+    }
+}
+.sforderSummary
+{
+    margin-top: @baseLineHeight * 2;
+    float: right;
+    width: 15em;
+    border: 1px solid @grayLight;
+
+    .sfcheckoutStepSubTitle
+    {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: .8em 1em;
+        font-size: @fontSizeH4;
+    }
+
+    .sforderSummaryTable
+    {
+        margin-top: 0;
+        margin-bottom: 0;
+        width: 100%;
+
+        tr:hover > th, tr:hover > td
+        {
+            background-color: transparent;
+        }
+
+        th
+        {
+            width: 100%;
+            font-weight: normal;
+            font-size: @fontSizeSmall;
+            padding: 0 0 0 1em;
+        }
+
+        td
+        {
+            white-space: nowrap;
+            padding: 0 1em;
+        }
+
+        th, td
+        {
+            text-align: right;
+            vertical-align: middle;
+            border: 0;
+        }
+
+        tbody
+        {
+            tr:last-child
+            {
+                th, td
+                {
+                    padding-bottom: 1em;
+                }
+            }
+        }
+
+        .sforderSummaryTotal
+        {
+            background-color: @grayLightest;
+
+            th, td
+            {
+                padding-top: 1em;
+                padding-bottom: 1em;
+            }
+
+            .sfPrice
+            {
+                font-size: @fontSizeH5;
+            }
+        }
+
+        .sfCouponCodeEntryFieldListMode
+        {
+            margin-right: 0;
+        }
+    }
+}
+/* Orders list */
+.sfordersListWrp
+{
+    .sfordersListCount
+    {
+        margin-top: @baseLineHeight;
+        margin-bottom: @baseLineHeight / 2;
+        color: @grayLight;
+        font-style: italic;
+    }
+
+    .sfordersList
+    {
+        .sfUnstyledList();
+        border-top: 1px solid @grayLightest;
+    }
+
+    .sfordersListItem
+    {
+        padding: (@baseLineHeight / 2) 0;
+        border-bottom: 1px solid @grayLightest;
+    }
+
+    .sforderBriefInfoWrp
+    {
+        float: left;
+        overflow: hidden;
+        width: 18em;
+        line-height: 1.2;
+        .sforderOrderedOn
+        {
+            margin-bottom: (@baseLineHeight / 2);
+            font-size: @fontSizeH5;
+            font-weight: bold;
+            line-height: 1.1;
+
+            .sforderOrderedOnLbl
+            {
+                display: block;
+                font-size: @fontSizeH6;
+                font-weight: normal;
+            }
+        }
+        .sforderBtnskWrp
+        {
+            margin-bottom: @baseLineHeight;
+            .sforderDetailsLnk
+            {
+                margin-right: @baseLineHeight;
+                padding: 2px 0 2px 22px;
+                display: inline-block;
+                vertical-align: top;
+                font-size: @fontSizeSmall;
+                background: transparent @backgroundImageSpriteEcommerce no-repeat 0 -700px;
+            }
+
+            .sfPrint
+            {
+                display: inline-block;
+                vertical-align: top;
+                font-size: @fontSizeSmall;
+                padding: 2px 0 2px 22px;
+                background: transparent @backgroundImageSpriteEcommerce no-repeat 0 -800px;
+            }
+        }
+        .sforderBriefInfoList
+        {
+            .sfUnstyledList();
+
+            li
+            {
+                padding-bottom: @baseLineHeight/6;
+                line-height: 1.1;
+                min-height: @baseLineHeight;
+            }
+
+            .sforderInfoFieldName
+            {
+	            width: 10em;
+                display: inline-block;
+                vertical-align: top;
+            }
+
+            .sforderInfoFieldValue
+            {
+                display: inline-block;
+                vertical-align: top;
+                width: 7em;
+                text-align: right;
+            }
+            .sforderNumber
+            {
+                padding-bottom: @baseLineHeight;
+            }
+        }
+        
+        p
+        {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+    .sfordersListDetailView
+    {
+        margin-left: 19em;
+        padding-left: 2em;
+        min-height: 220px;
+        border-left: 1px solid @grayLightest;
+        .sfordersListOrderStatusWrp
+        {
+            line-height: 1;
+            .sfordersListOrderStatus
+            {
+                display: block;
+                font-size: @fontSizeH4;
+                font-weight: bold;
+            }
+        }
+    }
+}
+.sforderDetailsWrp
+{
+    &.sfprintInvoiceWrp
+    {
+        margin-bottom: @baseLineHeight;
+
+        .sforderDetailTitle
+        {
+            margin-top: @baseLineHeight / 2;
+        }
+    }
+
+    .sfordersListCount
+    {
+        margin-top: @baseLineHeight;
+        margin-bottom: @baseLineHeight / 2;
+        color: @grayLight;
+        font-style: italic;
+    }
+
+    .sforderDetails
+    {
+        border-top: 1px solid @grayLightest;
+
+        .sforderDetailsIn
+        {
+            padding: (@baseLineHeight / 2) 0;
+            border-bottom: 1px solid @grayLightest;
+        }
+    }
+
+
+    .sforderBriefInfoWrp
+    {
+        float: left;
+        overflow: hidden;
+        width: 18em;
+        line-height: 1.2;
+
+        .sforderOrderedOn
+        {
+            margin-bottom: (@baseLineHeight / 2);
+            font-size: @fontSizeH5;
+            font-weight: bold;
+            line-height: 1.1;
+
+            .sforderOrderedOnLbl
+            {
+                display: block;
+                font-size: @fontSizeH6;
+                font-weight: normal;
+            }
+        }
+
+        .sforderBtnskWrp
+        {
+            margin-bottom: @baseLineHeight;
+
+            .sfPrint
+            {
+                display: inline-block;
+                vertical-align: top;
+                font-size: @fontSizeSmall;
+                padding: 2px 0 2px 22px;
+                background: transparent @backgroundImageSpriteEcommerce no-repeat 0 -800px;
+            }
+        }
+
+        .sforderBriefInfoList
+        {
+            .sfUnstyledList();
+
+            li
+            {
+                padding-bottom: @baseLineHeight/6;
+                line-height: 1.1;
+                min-height: @baseLineHeight;
+            }
+
+            .sforderInfoFieldName
+            {
+                width: 10em;
+                display: inline-block;
+                vertical-align: top;
+            }
+
+            .sforderInfoFieldValue
+            {
+                display: inline-block;
+                vertical-align: top;
+                width: 7em;
+                text-align: right;
+            }
+
+            .sforderNumber
+            {
+                padding-bottom: @baseLineHeight;
+            }
+        }
+
+        .sforderDetailsTitle
+        {
+            display: block;
+            margin-top: @baseLineHeight;
+            margin-bottom: 0;
+            font-size: 1em;
+            font-weight: bold;
+        }
+
+        p
+        {
+            margin-top: .3em;
+            margin-bottom: .3em;
+        }
+    }
+
+    .sfordersListDetailView
+    {
+        margin-left: 19em;
+        padding-left: 2em;
+        min-height: 220px;
+        border-left: 1px solid @grayLightest;
+
+        .sfordersListOrderStatusWrp
+        {
+            line-height: 1;
+
+            .sfordersListOrderStatus
+            {
+                display: block;
+                font-size: @fontSizeH4;
+                font-weight: bold;
+            }
+        }
+    }
+}
+.sfPrintBtn
+{
+    .btn();
+}
+/* Shop by filter */
+.sffilterTitle
+{
+    display: inline-block;
+    vertical-align: top;
+    margin-right: @baseLineHeight / 2;
+}
+a.sffilterClearLnk:link, a.sffilterClearLnk:visited, a.sffilterClearLnk:hover, a.sffilterClearLnk:active
+{
+    margin-top: @baseLineHeight * 3;
+    display: inline-block;
+    font-size: @fontSizeSmall;
+    color: @gray;
+}
+a.sffilterClearLnk:hover
+{
+    text-decoration: underline;
+}
+.sfSubmitBtn.sfSubmitFilter
+{
+    .btn();
+}
+.sfShopByFilterGroupList
+{
+    margin-bottom: @baseLineHeight;
+    .sfUnstyledList();
+
+    .sfShopByFilterGroupListItem
+    {
+        margin-bottom: @baseLineHeight;
+    }
+
+    .sfGroupTitle
+    {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: @fontSizeH4;
+    }
+
+    .sfShopByFilterList
+    {
+        .sfUnstyledList();
+
+        .sfShopByFilterListItem, .sfShopByFilterListItemSelected
+        {
+            margin-top: @baseLineHeight / 4;
+        }
+    }
+
+    &.sfVerticalList
+    {
+        .sfShopByFilterList
+        {
+            .sfFilterLnk
+            {
+                padding-left: 20px;
+                cursor: pointer;
+                text-decoration: underline;
+                color: #000;
+                background-image: @backgroundImageSprite !important;
+
+                &:hover
+                {
+                    text-decoration: none;
+                }
+            }
+
+            .sfShopByFilterListItemSelected
+            {
+                .sfFilterLnk
+                {
+                    color: #105CB6;
+
+                    &:hover
+                    {
+                        color: #105CB6;
+                    }
+                }
+            }
+        }
+    }
+
+    &.sfHorizontal
+    {
+        .sfShopByFilterGroupListItem
+        {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 3em;
+            max-width: 16em;
+            min-width: 7em;
+        }
+
+        input
+        {
+            vertical-align: middle;
+        }
+
+        label
+        {
+            display: inline;
+            vertical-align: middle;
+            padding-left: .5em;
+        }
+
+        .sfDisabled
+        {
+            color: @gray;
+        }
+    }
+
+    &.sfDropDown
+    {
+        
+        .sfShopByFilterGroupListItem
+        {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 3em;
+            max-width: 16em;
+            min-width: 7em;
+        }
+    }
+}
