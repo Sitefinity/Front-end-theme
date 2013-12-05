@@ -1,29 +1,43 @@
 .sfTweetsList
 {
-    max-width: 400px;
-}
-.sfTweetsList .sfTweetItem
-{
-    margin-bottom: 30px;
-}
-.sfTweetsList .sfTweetAuthor
-{
-    float: left;
-    font-weight: normal;
-    font-size: 15px;
-}
-.sfTweetsList .sfTweetDate
-{
-    float: right;
-    font-style: normal;
-    color: #666;
-}
-.sfTweetsList .sfTweetContent
-{
-    padding-top: 5px;
-    padding-bottom: 1px;
-    clear: both;
-}
-.sfTweetsList .sfExpand
-{
+    max-width: 35em;
+
+    .sfTweetItem
+    {
+        margin-bottom: @baseLineHeight;
+        margin-left: 60px;
+        min-height: 48px;
+        position: relative;
+    }
+    .sfTweetAvatar
+    {
+        position: absolute;
+        margin-left: -60px;
+        height: 48px;
+        width: 48px;
+    }
+    .sfTweetWrp
+    {
+    }
+    .sfTweetAuthor
+    {
+        float: left;
+        font-weight: normal;
+        font-size: @fontSizeH5;
+    }
+    .sfTweetDate
+    {
+        float: right;
+        font-style: normal;
+        color: @gray;
+    }
+    .sfTweetContent
+    {
+        padding-top: .5em;
+        padding-bottom: .1em;
+        clear: both;
+    }
+    .sfExpand
+    {
+    }
 }

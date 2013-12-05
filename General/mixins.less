@@ -274,6 +274,11 @@
   filter: ~"alpha(opacity=@{opacity})";
 }
 
+.not-link
+{
+    color: inherit;
+    cursor: default;
+}
 
 //Widgets
 #widget
@@ -980,5 +985,25 @@
                 color: @white;
             }
         }
+    }
+}
+
+//Ecommerce
+.sfProductTmbSize(@Width,@Height) 
+{
+    width: @Width;
+    img 
+    {
+        max-width:@Width;
+        max-height:@Height;
+    }
+}
+
+.sfProductTmbSize(@Width) 
+{
+    width: @Width;
+    img 
+    {
+        max-width:@Width;
     }
 }
