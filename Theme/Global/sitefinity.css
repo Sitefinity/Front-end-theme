@@ -25,41 +25,6 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/*// Mixin for form field states
-.formFieldState(@textColor: #555, @borderColor: #ccc, @backgroundColor: #f5f5f5) {
-  // Set the text color
-  .control-label,
-  .help-block,
-  .help-inline {
-    color: @textColor;
-  }
-  // Style inputs accordingly
-  .checkbox,
-  .radio,
-  input,
-  select,
-  textarea {
-    color: @textColor;
-  }
-  input,
-  select,
-  textarea {
-    border-color: @borderColor;
-    .box-shadow(inset 0 1px 1px rgba(0,0,0,.075)); // Redeclare so transitions work
-    &:focus {
-      border-color: darken(@borderColor, 10%);
-      @shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 6px lighten(@borderColor, 20%);
-      .box-shadow(@shadow);
-    }
-  }
-  // Give a small background color for input-prepend/-append
-  .input-prepend .add-on,
-  .input-append .add-on {
-    color: @textColor;
-    background-color: @backgroundColor;
-    border-color: @textColor;
-  }
-}*/
 .not-link {
   color: inherit;
   cursor: default;
@@ -1532,7 +1497,6 @@ table tbody tr.sfInfo:hover > td {
   margin-left: 0.75em;
   font-size: 87.5%;
 }
-/*#region --- COMMENTS --- */
 .sfcommentsCounterWrp {
   display: inline-block;
   vertical-align: top;
@@ -7567,7 +7531,6 @@ table tbody tr.sfInfo:hover > td {
   vertical-align: top;
   cursor: default;
 }
-/* Departments */
 .RadTabStrip,
 .RadTabStripVertical {
   font-size: inherit;
@@ -8022,7 +7985,6 @@ table tbody tr.sfInfo:hover > td {
 .sfproductAddChargeWrp {
   margin-top: 0.75em;
 }
-/*Tier pricing*/
 .sfProductTierPricesList {
   margin-left: 0;
   list-style: none;
@@ -8660,14 +8622,6 @@ table tbody tr.sfInfo:hover > td {
 .sfCouponEntryField.sfCouponEntryFieldHidden {
   display: none;
 }
-.sfCouponEntryField.sfCouponCodeEntryFieldChangeMode {
-  /*position: relative;
-        margin-top: 5px;
-        margin-bottom: 15px;
-        right: -120px;
-        text-align: left;*/
-
-}
 .sfCouponEntryField.sfCouponCodeEntryFieldChangeMode .sfCouponCodeItem {
   display: block;
 }
@@ -9240,7 +9194,6 @@ tbody .RadGrid_Basic .sfSingleItmPriceCol {
 .sforderSummary .sforderSummaryTable .sfCouponCodeEntryFieldListMode {
   margin-right: 0;
 }
-/* Orders list */
 .sfordersListWrp .sfordersListCount {
   margin-top: 1.5em;
   margin-bottom: 0.75em;
@@ -9509,7 +9462,6 @@ tbody .RadGrid_Basic .sfSingleItmPriceCol {
   padding: 11px 50px;
   font-size: 131.25%;
 }
-/* Shop by filter */
 .sffilterTitle {
   display: inline-block;
   vertical-align: top;
