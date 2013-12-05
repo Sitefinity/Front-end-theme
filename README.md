@@ -1,8 +1,9 @@
 Front-end-theme
 ===============
+Front-end-theme repo contains a new Front-end theme of Sitefinity. 
+
 Source folder
 --------------
-Front-end-theme repo contains a new Front-end theme of Sitefinity. 
 
 Source folder contains the source of the theme in .less files. General folder contains all generic styling, Content folder contains styling for all Sitefinity front-end widgets, Images folder contains background images and Global folder contains Sitefinity.less which imports all other files in the correct order. 
 
